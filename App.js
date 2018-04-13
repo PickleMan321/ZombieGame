@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import Textbox from './src/Components/Textbox'
 import ScriptArray from './src/Components/ScriptArray'
-import Modal from './Components/Modal'
+import Modal from './src/Components/Modal'
 
 export default class App extends React.Component {
   render() {
