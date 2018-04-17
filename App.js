@@ -1,8 +1,9 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import Textbox from './src/Components/Textbox'
-import ScriptArray from './src/Components/ScriptArray'
-import Modal from './src/Components/Modal'
+import Textbox from './src/Components/Textbox';
+import TextInput from './src/Components/TextInput';
+import ScriptArray from './src/Components/ScriptArray';
+import Modal from './src/Components/Modal';
 
 export default class App extends React.Component {
   render() {
@@ -12,6 +13,8 @@ export default class App extends React.Component {
       <Textbox/>
       <Modal/>
       <TextInput/>
+
+
         <Text>Open up App.js to start working on your app!</Text>
       </View>
     );
