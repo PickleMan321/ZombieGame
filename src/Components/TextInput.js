@@ -4,7 +4,7 @@ import { View, TextInput } from 'react-native';
 class TextInputs extends Component {
   render() {
     return (
-      <TextInputs
+      <TextInput
         {...this.props} // Inherit any props passed to it; e.g., multiline, numberOfLines below
         editable = {true}
         maxLength = {40}
@@ -26,11 +26,10 @@ export default class Answer extends Component {
   render() {
     return (
      <View style={{
-       backgroundColor: this.state.text,
        borderBottomColor: '#000000',
        borderBottomWidth: 1 }}
      >
-       <Answer
+       <TextInputs
          multiline = {true}
          numberOfLines = {4}
          onChangeText={(text) => this.setState({text})}

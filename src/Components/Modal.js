@@ -7,12 +7,22 @@ export default class ModalExample extends Component {
   };
 
   setModalVisible(visible) {
-    this.setState({modalVisible: visible});
+  this.setState({modalVisible: visible})
   }
 
+componentsWillRecieveProps(){
+console.log(this.props.index)
+  if(this.props.index === 5){
+
+    return{
+      modalVisible: true
+    }
+  }
+}
   render() {
     return (
       <View style={{marginTop: 22}}>
+
         <Modal
           animationType="slide"
           transparent={false}
