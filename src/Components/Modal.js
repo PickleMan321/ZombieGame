@@ -19,13 +19,12 @@ export default class ModalExample extends Component {
 
   render() {
     return (
-      <View style={{marginTop: 22}}>
-
         <Modal
           animationType="slide"
           transparent={false}
           visible={this.state.modalVisible}
           onRequestClose={() => {
+            this.setModalVisible(false);
             alert('Modal has been closed.');
           }}>
           <View style={{opacity:100,marginTop: 22,alignItems: 'center',justifyContent: 'center',height:'90%',width:'100%', backgroundColor:'darkred'}}>
@@ -63,14 +62,6 @@ export default class ModalExample extends Component {
             </View>
           </View>
         </Modal>
-
-        <TouchableHighlight
-          onPress={() => {
-            this.setModalVisible(true);
-          }}>
-          <Text>Answer options</Text>
-        </TouchableHighlight>
-      </View>
     );
   }
 }

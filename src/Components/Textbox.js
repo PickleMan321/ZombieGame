@@ -3,7 +3,7 @@ import {StyleSheet, View, Text, Button, TouchableHighlight} from 'react-native';
 import ScriptArray from './ScriptArray'
 
 
-export default class App extends React.Component {
+export default class TextBox extends React.Component {
 
 render(){
 return(
