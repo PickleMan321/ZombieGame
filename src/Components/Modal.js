@@ -2,23 +2,21 @@ import React, {Component} from 'react';
 import {Modal, Text, TouchableHighlight, View} from 'react-native';
 
 export default class ModalExample extends Component {
-  state = {
-    modalVisible: false,
-  };
 
-  setModalVisible(visible) {
-  this.setState({modalVisible: visible})
+  constructor() {
+    super();
+    this.state = { modalVisible: false };
   }
 
-componentsWillRecieveProps(){
-console.log(this.props.index)
-  if(this.props.index === 5){
-
-    return{
-      modalVisible: true
-    }
+  setModalVisible(visible = true) {
+    this.setState({modalVisible: visible})
   }
-}
+
+  static getDerivedStateFromProps(props){
+    if(props.index === 5) return { modalVisible:true };
+    return null;
+  }
+
   render() {
     return (
       <View style={{marginTop: 22}}>
