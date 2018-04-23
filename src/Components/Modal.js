@@ -30,35 +30,35 @@ export default class ModalExample extends Component {
           }}>
           <View style={{opacity:100,marginTop: 22,alignItems: 'center',justifyContent: 'center',height:'90%',width:'100%', backgroundColor:'darkred'}}>
             <View>
-              <Text style = {{fontWeight:'bold'}}>WHAT IS YOUR CHOICE?</Text>
+              <Text style = {{fontWeight:'bold'}}>What is 2 + 2?</Text>
 
               <TouchableHighlight
               style = {{paddingTop:'15%',paddingBottom:'14%'}}
                 onPress={() => {
                   this.setModalVisible(!this.state.modalVisible);
                 }}>
-                <Text>Correct Answer for Now</Text>
+                <Text>4</Text>
               </TouchableHighlight>
               <TouchableHighlight
               style = {{paddingBottom:'14%'}}
                 onPress={() => {
                   this.setModalVisible(!this.state.modalVisible);
                 }}>
-                <Text>Wrong Answer for Now</Text>
+                <Text>Fish?</Text>
               </TouchableHighlight>
               <TouchableHighlight
               style = {{paddingBottom:'14%'}}
                 onPress={() => {
                   this.setModalVisible(!this.state.modalVisible);
                 }}>
-                <Text>Wrong Answer for Now</Text>
+                <Text>Is that evne possible to answer?</Text>
               </TouchableHighlight>
               <TouchableHighlight
               style = {{paddingBottom:'14%'}}
                 onPress={() => {
                   this.setModalVisible(!this.state.modalVisible);
                 }}>
-                <Text>Wrong Answer for Now</Text>
+                <Text>I give up</Text>
               </TouchableHighlight>
             </View>
           </View>
