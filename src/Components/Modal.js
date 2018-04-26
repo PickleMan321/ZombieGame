@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Modal, Text, TouchableHighlight, View} from 'react-native';
+import {Alert, Modal, Text, TouchableHighlight, View} from 'react-native';
 
 export default class ModalExample extends Component {
 
@@ -35,29 +35,31 @@ export default class ModalExample extends Component {
               <TouchableHighlight
               style = {{paddingTop:'15%',paddingBottom:'14%'}}
                 onPress={() => {
+                  Alert.alert("Right answer","THATS RIGHT NOOB");
                   this.setModalVisible(!this.state.modalVisible);
                 }}>
                 <Text>4</Text>
               </TouchableHighlight>
               <TouchableHighlight
               style = {{paddingBottom:'14%'}}
-                onPress={() => {
-                  this.setModalVisible(!this.state.modalVisible);
-                }}>
+              onPress={() => {
+                Alert.alert("Wrong answer",'This is the wrong answer');
+              }}>
                 <Text>Fish?</Text>
+
               </TouchableHighlight>
               <TouchableHighlight
               style = {{paddingBottom:'14%'}}
-                onPress={() => {
-                  this.setModalVisible(!this.state.modalVisible);
-                }}>
+              onPress={() => {
+                Alert.alert("Wrong answer",'This is the wrong answer');
+              }}>
                 <Text>Is that evne possible to answer?</Text>
               </TouchableHighlight>
               <TouchableHighlight
               style = {{paddingBottom:'14%'}}
-                onPress={() => {
-                  this.setModalVisible(!this.state.modalVisible);
-                }}>
+              onPress={() => {
+                Alert.alert("Wrong answer",'This is the wrong answer');
+              }}>
                 <Text>I give up</Text>
               </TouchableHighlight>
             </View>
