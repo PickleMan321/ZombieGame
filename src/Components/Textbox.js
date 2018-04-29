@@ -29,7 +29,6 @@ const styles = StyleSheet.create({
 container: {
 flex: 1,
 justifyContent: 'flex-start',
-
 paddingLeft:5,
 paddingRight: 5,
 borderWidth: 3,
