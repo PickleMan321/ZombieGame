@@ -333,7 +333,6 @@ As you both reach the truck, climb in, and check the gas, you realize there isn�
 Professor: “Looks like we’ll need to plan this out. We’re going to need the right distance to the wall without running out of gas…”
 
 Professor: (Explain)
-
 `
 
 export default sentences
