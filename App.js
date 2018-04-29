@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, KeyboardAvoidingView } from 'react-native';
+import { StyleSheet, Text, View, KeyboardAvoidingView, ImageBackground } from 'react-native';
 import Textbox from './src/Components/Textbox';
 import TextInput from './src/Components/TextInput';
 import ScriptArray from './src/Components/ScriptArray';
@@ -17,14 +17,25 @@ export default class App extends React.Component {
   handlescript() {
     this.setState({sentences: this.state.sentences + 1})
   }
-  
+
   render() {
     return (
-      <View style={styles.container}>
+      <ImageBackground
+        style={{
+          backgroundColor: '#ccc',
+          flex: 1,
+          position: 'absolute',
+          width: '100%',
+          height: '100%',
+          justifyContent: 'flex-end',
+        }}
+        resizeMode='stretch'
+        source={require('./assets/schoolHallwayAnime.jpg')}
+      >
         <Textbox index = {this.state.sentences} handle= {this.handlescript.bind(this)}/>
         <Modal index = {this.state.sentences}/>
-        <Text>Open up App.js to start working on your app!</Text>
-      </View>
+
+      </ImageBackground>
     );
   }
 }

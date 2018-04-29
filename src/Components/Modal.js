@@ -8,7 +8,7 @@ export default class ModalExample extends Component {
     this.state = { modalVisible: false };
   }
 
-  setModalVisible(visible = true) {
+  setModalVisible(visible = false) {
     this.setState({modalVisible: visible})
   }
 
@@ -19,7 +19,7 @@ export default class ModalExample extends Component {
 
   render() {
     return (
-      <View style={{marginTop: 22}}>
+      <View>
 
         <Modal
           animationType="slide"
@@ -28,7 +28,7 @@ export default class ModalExample extends Component {
           onRequestClose={() => {
             alert('Modal has been closed.');
           }}>
-          <View style={{opacity:100,marginTop: 22,alignItems: 'center',justifyContent: 'center',height:'90%',width:'100%', backgroundColor:'darkred'}}>
+          <View style={{opacity:100,marginTop: 22,alignItems: 'center',justifyContent: 'center',height:'100%',width:'100%', backgroundColor:'skyblue'}}>
             <View>
               <Text style = {{fontWeight:'bold'}}>What is 2 + 2?</Text>
 
@@ -43,7 +43,7 @@ export default class ModalExample extends Component {
               <TouchableHighlight
               style = {{paddingBottom:'14%'}}
               onPress={() => {
-                Alert.alert("Wrong answer",'This is the wrong answer');
+                Alert.alert("Wrong answer");
               }}>
                 <Text>Fish?</Text>
 
@@ -51,14 +51,14 @@ export default class ModalExample extends Component {
               <TouchableHighlight
               style = {{paddingBottom:'14%'}}
               onPress={() => {
-                Alert.alert("Wrong answer",'This is the wrong answer');
+                Alert.alert("Wrong answer");
               }}>
                 <Text>Is that evne possible to answer?</Text>
               </TouchableHighlight>
               <TouchableHighlight
               style = {{paddingBottom:'14%'}}
               onPress={() => {
-                Alert.alert("Wrong answer",'This is the wrong answer');
+                Alert.alert("Wrong answer");
               }}>
                 <Text>I give up</Text>
               </TouchableHighlight>
@@ -66,12 +66,7 @@ export default class ModalExample extends Component {
           </View>
         </Modal>
 
-        <TouchableHighlight
-          onPress={() => {
-            this.setModalVisible(true);
-          }}>
-          <Text>Answer options</Text>
-        </TouchableHighlight>
+
       </View>
     );
   }
