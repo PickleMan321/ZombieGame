@@ -9,7 +9,7 @@ render(){
 return(
 
     <TouchableHighlight
-    style = {{height: "30%", width: "100%"}}
+    style = {{height: "40%", width: "100%"}}
     onPress = {this.props.handle}
 >
 
@@ -28,11 +28,10 @@ return(
 const styles = StyleSheet.create({
 container: {
 flex: 1,
-justifyContent: 'center',
-alignItems:'center',
-paddingTop:20,
-paddingLeft:15,
-paddingRight: 15,
+justifyContent: 'flex-start',
+
+paddingLeft:5,
+paddingRight: 5,
 borderWidth: 3,
 backgroundColor:'skyblue'
 
