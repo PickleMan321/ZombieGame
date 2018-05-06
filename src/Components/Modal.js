@@ -35,7 +35,7 @@ export default class ModalExample extends Component {
               <TouchableHighlight
               style = {{paddingTop:'15%',paddingBottom:'14%'}}
                 onPress={() => {
-                  Alert.alert("Right answer","THATS RIGHT NOOB");
+                  Alert.alert("Right answer","You can count!");
                   this.setModalVisible(!this.state.modalVisible);
                 }}>
                 <Text>4</Text>
@@ -43,7 +43,7 @@ export default class ModalExample extends Component {
               <TouchableHighlight
               style = {{paddingBottom:'14%'}}
               onPress={() => {
-                Alert.alert("Wrong answer");
+                Alert.alert("You're funny");
               }}>
                 <Text>Fish?</Text>
 
@@ -51,14 +51,14 @@ export default class ModalExample extends Component {
               <TouchableHighlight
               style = {{paddingBottom:'14%'}}
               onPress={() => {
-                Alert.alert("Wrong answer");
+                Alert.alert("I think so?");
               }}>
                 <Text>Is that evne possible to answer?</Text>
               </TouchableHighlight>
               <TouchableHighlight
               style = {{paddingBottom:'14%'}}
               onPress={() => {
-                Alert.alert("Wrong answer");
+                Alert.alert("C'mon, it's not that hard");
               }}>
                 <Text>I give up</Text>
               </TouchableHighlight>
