@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Modal, Text, TouchableHighlight, View} from 'react-native';
+import {Alert, Modal, Text, TouchableHighlight, View} from 'react-native';
 
 export default class ModalExample extends Component {
 
@@ -8,7 +8,7 @@ export default class ModalExample extends Component {
     this.state = { modalVisible: false };
   }
 
-  setModalVisible(visible = true) {
+  setModalVisible(visible = false) {
     this.setState({modalVisible: visible})
   }
 
@@ -19,6 +19,8 @@ export default class ModalExample extends Component {
 
   render() {
     return (
+      <View>
+
         <Modal
           animationType="slide"
           transparent={false}
@@ -27,41 +29,46 @@ export default class ModalExample extends Component {
             this.setModalVisible(false);
             alert('Modal has been closed.');
           }}>
-          <View style={{opacity:100,marginTop: 22,alignItems: 'center',justifyContent: 'center',height:'90%',width:'100%', backgroundColor:'darkred'}}>
+          <View style={{opacity:100,marginTop: 22,alignItems: 'center',justifyContent: 'center',height:'100%',width:'100%', backgroundColor:'skyblue'}}>
             <View>
-              <Text style = {{fontWeight:'bold'}}>WHAT IS YOUR CHOICE?</Text>
+              <Text style = {{fontWeight:'bold'}}>What is 2 + 2?</Text>
 
               <TouchableHighlight
               style = {{paddingTop:'15%',paddingBottom:'14%'}}
                 onPress={() => {
+                  Alert.alert("Right answer","You can count!");
                   this.setModalVisible(!this.state.modalVisible);
                 }}>
-                <Text>Correct Answer for Now</Text>
+                <Text>4</Text>
               </TouchableHighlight>
               <TouchableHighlight
               style = {{paddingBottom:'14%'}}
-                onPress={() => {
-                  this.setModalVisible(!this.state.modalVisible);
-                }}>
-                <Text>Wrong Answer for Now</Text>
+              onPress={() => {
+                Alert.alert("You're funny");
+              }}>
+                <Text>Fish?</Text>
+
               </TouchableHighlight>
               <TouchableHighlight
               style = {{paddingBottom:'14%'}}
-                onPress={() => {
-                  this.setModalVisible(!this.state.modalVisible);
-                }}>
-                <Text>Wrong Answer for Now</Text>
+              onPress={() => {
+                Alert.alert("I think so?");
+              }}>
+                <Text>Is that evne possible to answer?</Text>
               </TouchableHighlight>
               <TouchableHighlight
               style = {{paddingBottom:'14%'}}
-                onPress={() => {
-                  this.setModalVisible(!this.state.modalVisible);
-                }}>
-                <Text>Wrong Answer for Now</Text>
+              onPress={() => {
+                Alert.alert("C'mon, it's not that hard");
+              }}>
+                <Text>I give up</Text>
               </TouchableHighlight>
             </View>
           </View>
         </Modal>
+
+
+      </View>
     );
   }
 }

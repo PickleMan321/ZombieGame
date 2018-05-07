@@ -28,11 +28,11 @@ return(
 const styles = StyleSheet.create({
 container: {
 flex: 1,
-paddingTop:20,
-paddingLeft:15,
-paddingRight: 15,
+justifyContent: 'flex-start',
+paddingLeft:5,
+paddingRight: 5,
 borderWidth: 3,
-backgroundColor:'firebrick'
+backgroundColor:'skyblue'
 
   }
 })
