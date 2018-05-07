@@ -1,11 +1,34 @@
-import React, {Component} from 'react';
-import {Alert, Modal, Text, TouchableHighlight, View} from 'react-native';
+import React, { Component } from 'react';
+import { Alert, Modal, Text, TouchableHighlight, View, StyleSheet } from 'react-native';
+
+const questions = [
+  { 
+    text: "What is the derivative of a constant?", 
+    type:"mc",
+    triggerIndex: 5,
+    onCorrect() {
+      alert("You got it!"); 
+      return true; 
+    },
+    onWrong:()=>alert("Nope. Try again!"),
+    choices: [
+      { text:"0", correct:true },
+      { text:"1" },
+      { text:"-1" },
+      { text:"I need more info to answer" }, 
+    ]
+  }
+]
 
 export default class ModalExample extends Component {
 
   constructor() {
     super();
-    this.state = { modalVisible: false };
+    this.state = { 
+      question:null,
+      modalVisible: false,
+    };
+    this.renderQuestion = this.renderQuestion.bind(this);
   }
 
   setModalVisible(visible = false) {
@@ -13,11 +36,50 @@ export default class ModalExample extends Component {
   }
 
   static getDerivedStateFromProps(props){
-    if(props.index === 5) return { modalVisible:true };
-    return null;
+
+    const question = questions.find(q=>q.triggerIndex===props.index)
+    if(!question) return null;
+    
+    return {
+      modalVisible:true,
+      question,
+    }
+
+  }
+
+  renderQuestion(question) {
+
+    const { choices } = question;
+
+    return(
+      <View style={styles.container}>
+        <Text style = {styles.questionText}>{question.text}</Text>
+        { 
+          choices.map( (choice, k) => (
+            <TouchableHighlight
+            key = { k }
+            style = {{ width:"100%" }}
+            onPress={() => {
+              if(!choice.correct) question.onWrong();
+              else {
+                question.onCorrect();
+                this.setModalVisible();
+              }
+            }}>
+              <View style = { styles.choice }>
+                <Text style={styles.choiceText}>{ choice.text }</Text>
+              </View>
+            </TouchableHighlight>
+          ))
+        }
+      </View>
+    )
   }
 
   render() {
+
+    const { question } = this.state;
+
     return (
       <View>
 
@@ -25,46 +87,8 @@ export default class ModalExample extends Component {
           animationType="slide"
           transparent={false}
           visible={this.state.modalVisible}
-          onRequestClose={() => {
-            this.setModalVisible(false);
-            alert('Modal has been closed.');
-          }}>
-          <View style={{opacity:100,marginTop: 22,alignItems: 'center',justifyContent: 'center',height:'100%',width:'100%', backgroundColor:'skyblue'}}>
-            <View>
-              <Text style = {{fontWeight:'bold'}}>What is 2 + 2?</Text>
-
-              <TouchableHighlight
-              style = {{paddingTop:'15%',paddingBottom:'14%'}}
-                onPress={() => {
-                  Alert.alert("Right answer","You can count!");
-                  this.setModalVisible(!this.state.modalVisible);
-                }}>
-                <Text>4</Text>
-              </TouchableHighlight>
-              <TouchableHighlight
-              style = {{paddingBottom:'14%'}}
-              onPress={() => {
-                Alert.alert("You're funny");
-              }}>
-                <Text>Fish?</Text>
-
-              </TouchableHighlight>
-              <TouchableHighlight
-              style = {{paddingBottom:'14%'}}
-              onPress={() => {
-                Alert.alert("I think so?");
-              }}>
-                <Text>Is that evne possible to answer?</Text>
-              </TouchableHighlight>
-              <TouchableHighlight
-              style = {{paddingBottom:'14%'}}
-              onPress={() => {
-                Alert.alert("C'mon, it's not that hard");
-              }}>
-                <Text>I give up</Text>
-              </TouchableHighlight>
-            </View>
-          </View>
+          onRequestClose={() => this.setModalVisible()}>
+          { question && this.renderQuestion(question) }
         </Modal>
 
 
@@ -72,3 +96,29 @@ export default class ModalExample extends Component {
     );
   }
 }
+
+const styles = StyleSheet.create({
+  container:{
+    opacity:100,
+    alignItems: 'center',
+    justifyContent: 'space-around',
+    flex:1,
+    backgroundColor:'skyblue'
+  },
+  choice: {
+    padding:10,
+    borderWidth:1,
+    borderColor:'gray',
+    width:"100%",
+    backgroundColor:'skyblue'    
+  },
+  questionText: {
+    fontWeight:'bold',
+    fontSize:35,
+    textAlign:'center',
+  },
+  choiceText: {
+    fontSize:20,
+    textAlign:'center',
+  }
+})
