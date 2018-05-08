@@ -4,6 +4,7 @@ import Textbox from './src/Components/Textbox';
 import TextInput from './src/Components/TextInput';
 import ScriptArray from './src/Components/ScriptArray';
 import Modal from './src/Components/Modal';
+import Background from './src/Components/Background';
 
 
 export default class App extends React.Component {
@@ -20,22 +21,10 @@ export default class App extends React.Component {
 
   render() {
     return (
-      <ImageBackground
-        style={{
-          backgroundColor: '#ccc',
-          flex: 1,
-          position: 'absolute',
-          width: '100%',
-          height: '100%',
-          justifyContent: 'flex-end',
-        }}
-        resizeMode='stretch'
-        source={require('./assets/schoolHallwayAnime.jpg')}
-      >
-        <Textbox index = {this.state.sentences} handle= {this.handlescript.bind(this)}/>
-        <Modal index = {this.state.sentences}/>
-
-      </ImageBackground>
+  <Background index = {this.state.sentences}>
+   <Textbox index = {this.state.sentences}  handle= {this.handlescript.bind(this)}/>
+      <Modal index = {this.state.sentences}/>
+      </Background>
     );
   }
 }

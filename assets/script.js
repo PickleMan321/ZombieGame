@@ -333,6 +333,18 @@ As you both reach the truck, climb in, and check the gas, you realize there isn�
 Professor: “Looks like we’ll need to plan this out. We’re going to need the right distance to the wall without running out of gas…”
 
 Professor: (Explain)
+
+Hour 39
+
+With this act, you may not have stopped the virus, but you managed to prevent it from spreading anymore.
+
+Things finally started looking up for once.
+
+You knew this was far from over though. You were still trapped in a city full of zombies.
+
+You were far from being safe. Not for a long while.
+
+But with this, humanity might be able to get back up on its feet once again.
 `
 
 export default sentences
