@@ -2,36 +2,52 @@ import React, { Component } from 'react';
 import { Alert, Modal, Text, TouchableHighlight, View, StyleSheet } from 'react-native';
 
 const questions = [
-  { 
-    text: "What is the derivative of a constant?", 
+  {
+    text: "What is the derivative of a constant?",
     type:"mc",
     triggerIndex: 38,
     onCorrect() {
-      alert("You got it!"); 
-      return true; 
+      alert("You got it!");
+      return true;
     },
     onWrong:()=>alert("Nope. Try again!"),
     choices: [
       { text:"0", correct:true },
       { text:"1" },
       { text:"-1" },
-      { text:"I need more info to answer" }, 
+      { text:"I need more info to answer" },
     ]
-  }, 
+  },
   {
     text: "What is the limit of 1/x as it goes to infinity?",
     type:"mc",
-    triggerIndex: 15,
+    triggerIndex: 63,
     onCorrect() {
-      alert("You got it!"); 
-      return true; 
+      alert("You got it!");
+      return true;
     },
     onWrong:()=>alert("Nope. Try again!"),
     choices: [
       { text:"0", correct:true },
       { text:"1" },
       { text:"-1" },
-      { text:"I need more info to answer" }, 
+      { text:"I need more info to answer" },
+    ]
+  },
+  {
+    text: "How heavy is this?",
+    type:"mc",
+    triggerIndex: 79,
+    onCorrect() {
+      alert("You got it!");
+      return true;
+    },
+    onWrong:()=>alert("Nope. Try again!"),
+    choices: [
+      { text:"0" },
+      { text:"100" },
+      { text:"Really heavy", correct:true  },
+      { text:"I need more info to answer" },
     ]
   }
 ]
@@ -40,7 +56,7 @@ export default class ModalExample extends Component {
 
   constructor() {
     super();
-    this.state = { 
+    this.state = {
       question:null,
       modalVisible: false,
     };
@@ -55,7 +71,7 @@ export default class ModalExample extends Component {
 
     const question = questions.find(q=>q.triggerIndex===props.index)
     if(!question) return null;
-    
+
     return {
       modalVisible:true,
       question,
@@ -70,7 +86,7 @@ export default class ModalExample extends Component {
     return(
       <View style={styles.container}>
         <Text style = {styles.questionText}>{question.text}</Text>
-        { 
+        {
           choices.map( (choice, k) => (
             <TouchableHighlight
             key = { k }
@@ -126,7 +142,7 @@ const styles = StyleSheet.create({
     borderWidth:1,
     borderColor:'gray',
     width:"100%",
-    backgroundColor:'skyblue'    
+    backgroundColor:'skyblue'
   },
   questionText: {
     fontWeight:'bold',
