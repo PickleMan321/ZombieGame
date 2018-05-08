@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Alert, Modal, Text, TouchableHighlight, View, StyleSheet } from 'react-native';
+import { Alert, Modal, Text, TouchableHighlight, View, StyleSheet, TextInput, Image, Button } from 'react-native';
 
 const questions = [
   { 
@@ -33,6 +33,18 @@ const questions = [
       { text:"-1" },
       { text:"I need more info to answer" }, 
     ]
+  }, 
+  {
+    text: "What is the following derivative evaluated at x=3?", 
+    image: require("../../assets/question3.png"),
+    answer: 8,
+    type:'num',
+    triggerIndex:2,
+    onCorrect() {
+      alert("You got it!"); 
+      return true; 
+    },
+    onWrong:()=>alert("Nope. Try again!"),
   }
 ]
 
@@ -45,10 +57,12 @@ export default class ModalExample extends Component {
       modalVisible: false,
     };
     this.renderQuestion = this.renderQuestion.bind(this);
+    this.renderInput = this.renderInput.bind(this);
+    this.renderChoices = this.renderChoices.bind(this);
   }
 
   setModalVisible(visible = false) {
-    this.setState({modalVisible: visible})
+    this.setState({modalVisible: visible, questionInput:""})
   }
 
   static getDerivedStateFromProps(props){
@@ -62,32 +76,55 @@ export default class ModalExample extends Component {
     }
 
   }
+  renderChoices(question, choices) {
+    return choices.map( (choice, k) => (
+      <TouchableHighlight
+      key = { k }
+      style = {{ width:"100%" }}
+      onPress={() => {
+        if(!choice.correct) question.onWrong();
+        else {
+          question.onCorrect();
+          this.setModalVisible();
+        }
+      }}>
+        <View style = { styles.choice }>
+          <Text style={styles.choiceText}>{ choice.text }</Text>
+        </View>
+      </TouchableHighlight>
+    )) 
+  }
+
+  renderInput({answer, onWrong, onCorrect}) {
+    const { questionInput } = this.state;
+
+    const checkAnswer = () => {
+      if(!questionInput) return onWrong();
+      if(Math.round(questionInput, 2) === Math.round(answer, 2)){ onCorrect(); this.setModalVisible()}
+      else return onWrong();
+    }
+
+    return(
+      <View>
+        <TextInput 
+        value={this.state.questionInput} 
+        style={styles.questionInput}
+        onChangeText = {t => this.setState({questionInput:t}) }
+        onSubmitText = { checkAnswer }/>
+        <Button title = "Submit Answer" onPress={ checkAnswer } />
+      </View>
+    )
+  }
 
   renderQuestion(question) {
 
-    const { choices } = question;
+    const { choices, type, image, text } = question;
 
     return(
       <View style={styles.container}>
-        <Text style = {styles.questionText}>{question.text}</Text>
-        { 
-          choices.map( (choice, k) => (
-            <TouchableHighlight
-            key = { k }
-            style = {{ width:"100%" }}
-            onPress={() => {
-              if(!choice.correct) question.onWrong();
-              else {
-                question.onCorrect();
-                this.setModalVisible();
-              }
-            }}>
-              <View style = { styles.choice }>
-                <Text style={styles.choiceText}>{ choice.text }</Text>
-              </View>
-            </TouchableHighlight>
-          ))
-        }
+        { text && <Text style = {styles.questionText}>{text}</Text> }
+        { image && <Image source={image} style={styles.questionImage} resizeMode="contain"/> }
+        { type === "mc" ? this.renderChoices(question, choices) : this.renderInput(question) }
       </View>
     )
   }
@@ -122,7 +159,7 @@ const styles = StyleSheet.create({
     backgroundColor:'skyblue'
   },
   choice: {
-    padding:10,
+    padding:5,
     borderWidth:1,
     borderColor:'gray',
     width:"100%",
@@ -130,11 +167,20 @@ const styles = StyleSheet.create({
   },
   questionText: {
     fontWeight:'bold',
-    fontSize:35,
+    fontSize:30,
     textAlign:'center',
   },
   choiceText: {
-    fontSize:20,
+    fontSize:15,
     textAlign:'center',
+  },
+  questionImage: {
+    height:70,
+    width:"100%"
+  },
+  questionInput: {
+    borderWidth:1,
+    borderColor:'#0d0d0d',
+    margin:5,
   }
 })
