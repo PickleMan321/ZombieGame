@@ -5,7 +5,7 @@ const questions = [
   { 
     text: "What is the derivative of a constant?", 
     type:"mc",
-    triggerIndex: 5,
+    triggerIndex: 38,
     onCorrect() {
       alert("You got it!"); 
       return true; 
