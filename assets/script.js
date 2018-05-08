@@ -26,7 +26,7 @@ You look up at the board in hopes to decrypt whatever he wrote on the board, may
 You stare at the board long enough, maybe periodically look at your notes (blank paper) in hopes he’ll ask someone else.
 
 
-Choice one:
+
 It was a good minute of silence of you pretending to try and figure out the problem. This was the longest minute of your life. You hoped he would just move on, but he was just staring at you expecting an answer to come out of your mouth any second. The silence was broken by a loud screech, some sort of explosion, and screaming.
 
 
