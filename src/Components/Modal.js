@@ -49,16 +49,16 @@ const questions = [
       { text:"Really heavy", correct:true  },
       { text:"I need more info to answer" },
     ]
-  }, 
+  },
   {
-    text: "What is the following derivative evaluated at x=3?", 
+    text: "What is the following derivative evaluated at x=3?",
     image: require("../../assets/question3.png"),
     answer: 8,
     type:'num',
     triggerIndex:2,
     onCorrect() {
-      alert("You got it!"); 
-      return true; 
+      alert("You got it!");
+      return true;
     },
     onWrong:()=>alert("Nope. Try again!"),
   }
@@ -108,7 +108,7 @@ export default class ModalExample extends Component {
           <Text style={styles.choiceText}>{ choice.text }</Text>
         </View>
       </TouchableHighlight>
-    )) 
+    ))
   }
 
   renderInput({answer, onWrong, onCorrect}) {
@@ -122,8 +122,8 @@ export default class ModalExample extends Component {
 
     return(
       <View>
-        <TextInput 
-        value={this.state.questionInput} 
+        <TextInput
+        value={this.state.questionInput}
         style={styles.questionInput}
         onChangeText = {t => this.setState({questionInput:t}) }
         onSubmitText = { checkAnswer }/>
@@ -138,31 +138,13 @@ export default class ModalExample extends Component {
 
     return(
       <View style={styles.container}>
-<<<<<<< HEAD
+
         { text && <Text style = {styles.questionText}>{text}</Text> }
         { image && <Image source={image} style={styles.questionImage} resizeMode="contain"/> }
         { type === "mc" ? this.renderChoices(question, choices) : this.renderInput(question) }
-=======
-        <Text style = {styles.questionText}>{question.text}</Text>
-        {
-          choices.map( (choice, k) => (
-            <TouchableHighlight
-            key = { k }
-            style = {{ width:"100%" }}
-            onPress={() => {
-              if(!choice.correct) question.onWrong();
-              else {
-                question.onCorrect();
-                this.setModalVisible();
-              }
-            }}>
-              <View style = { styles.choice }>
-                <Text style={styles.choiceText}>{ choice.text }</Text>
-              </View>
-            </TouchableHighlight>
-          ))
-        }
->>>>>>> 7387141619b88379f52e78e59a9d29af7bb21f61
+
+
+
       </View>
     )
   }
