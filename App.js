@@ -5,6 +5,7 @@ import TextInput from './src/Components/TextInput';
 import ScriptArray from './src/Components/ScriptArray';
 import Modal from './src/Components/Modal';
 import Background from './src/Components/Background';
+import Characters from './src/Components/Characters';
 
 
 export default class App extends React.Component {
@@ -22,6 +23,7 @@ export default class App extends React.Component {
   render() {
     return (
   <Background index = {this.state.sentences}>
+  <Characters index = {this.state.sentences}/>
    <Textbox index = {this.state.sentences}  handle= {this.handlescript.bind(this)}/>
       <Modal index = {this.state.sentences}/>
       </Background>
