@@ -17,7 +17,7 @@ Hour 4
 It’s tough, but you were doing your best to stay awake during your calculus class. You browsed through everything on your phone so there was nothing left to keep your mind entertained. You sunk into your chair with disappointment as you tuned into what your professor was teaching.
 
 Before you even tried to understand what he was talking about, the professor calls out your name.
-Professor: “Hmm, how about you, (playername)? Can you tell me what you got for an answer?” He asked pointing to the board.
+Professor: “Hmm, how about you, in the back? Can you tell me what you got for an answer?” He asked pointing to the board.
 
 
 You look up at the board in hopes to decrypt whatever he wrote on the board, maybe come up with an answer that doesn’t sound like I wasn’t paying attention. Looking at the board, you realize you have no idea what he wrote…
