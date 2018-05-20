@@ -52,7 +52,7 @@ You quickly go down the stairs, open the door to the courtyard, and realize that
 
 There were too many to count, even worse, there were too many for you to think you could escape from this. You were trapped on campus along with however many students there were left.
 
-From behind you could hear running and “(Player name)!” be screamed out. You turn to see your professor come down the stairs, short of breath.
+From behind you could hear running and your name be screamed out. You turn to see your professor come down the stairs, short of breath.
 
 Professor: “Oh, it’s good you’re ok! You know, “ He stops to take a few deep breaths, “you’re faster than you look!”
 
@@ -72,7 +72,7 @@ Professor: “Yes, yes that might just work!”
 
 You look at him with a confused look.
 
-Professor: “Looks like I still have a lesson to teach you, (Player name)!”
+Professor: “Looks like I still have a lesson to teach you.”
 
 Professor: “It seems like that truck still has a bit of life in it. If we can bring towards the middle of campus, light it, attract most of the zombies towards it, well, that should take care of our problem,”
 
@@ -127,7 +127,7 @@ Professor: “Ok, well…”
 
 He pulls out a map and a pen. (Normally, there would be more to this, like being in the car and the car having a map. But for shortness sake, he just has one).
 
-Professor: “I think we can find the fastest route with this. Yeah. Ok, (Player name), do you remember what integrals are?”
+Professor: “I think we can find the fastest route with this. Yeah. Ok, so do you remember what integrals are?”
 
 Again with calculus? Really? How would it help this time?
 
@@ -295,7 +295,7 @@ As they talked on, you notice a truck in the distance, and nearly a clear route 
 
 The professor takes notice of you.
 
-Professor: “What are you thinking, (Player name)?
+Professor: “What are you thinking?
 
 You explain and lead him towards the truck.
 
@@ -325,7 +325,7 @@ As they talked on, you notice a truck in the distance, and nearly a clear route 
 
 The professor takes notice of you.
 
-Professor: “What are you thinking, (Player name)?
+Professor: “What are you thinking?
 
 You explain and lead him towards the truck.
 

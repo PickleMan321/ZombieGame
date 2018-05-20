@@ -4,9 +4,9 @@ import {View, Text, Image, StyleSheet} from 'react-native';
 
 
  const images = [
-  {img: require('../../assets/boy.jpg') , triggerIndex: 0},
-  {img: require('../../assets/prof.jpg') , triggerIndex: 5},
-  {img: require('../../assets/zambie.jpg') , triggerIndex: 16},
+  {img: require('../../assets/boy.png') , triggerIndex: 0},
+  {img: require('../../assets/prof.png') , triggerIndex: 5},
+  {img: require('../../assets/zambie.png') , triggerIndex: 16},
 
 ]
 
@@ -31,6 +31,7 @@ static getDerivedStateFromProps(props){
   render(){
   return (
     <Image
+      resizeMode={'contain'}
       style={styles.image}
       source={this.state.image}
     >
@@ -45,11 +46,10 @@ static getDerivedStateFromProps(props){
 
 const styles= StyleSheet.create({
   image:{
-    backgroundColor: '#ccc',
-    flex: 1,
-    width: '10%',
-    height: '10%',
-    justifyContent: 'flex-end',
-    alignItems: 'flex-start'
+    backgroundColor: 'transparent',
+    width: '90%',
+    height: '40%',
+
+
   }
 })
