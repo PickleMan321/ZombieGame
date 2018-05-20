@@ -4,9 +4,13 @@ import {View, Text, Image, StyleSheet} from 'react-native';
 
 
  const images = [
-  {img: require('../../assets/boy.png') , triggerIndex: 0},
-  {img: require('../../assets/prof.png') , triggerIndex: 5},
-  {img: require('../../assets/zambie.png') , triggerIndex: 16},
+  {img: require('../../assets/boy.png') , triggerIndex: 5},
+  {img: require('../../assets/prof.png') , triggerIndex: 8},
+  {img: require('../../assets/boy.png') , triggerIndex: 13},
+    {img: require('../../assets/prof.png') , triggerIndex: 15},
+    {img: require('../../assets/boy.png') , triggerIndex: 16},
+  {img: require('../../assets/zambie.png') , triggerIndex: 18},
+  {img: require('../../assets/boy.png') , triggerIndex: 19},
 
 ]
 
