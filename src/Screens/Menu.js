@@ -36,7 +36,7 @@ const styles= StyleSheet.create({
     button:{
       backgroundColor: '#24662d'
       borderWidth: '1'
-    }
+    },
     backgroundColor: '#700d0d',
     flex: 1,
     position: 'absolute',
