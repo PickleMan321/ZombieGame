@@ -2,20 +2,10 @@ import React from 'react';
 import { View } from 'react-native';
 import Router from './config/router';
 
-export default class Root extends React.Component {
-
+export default class App extends React.Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Router />
-      </View>
+      <Router />
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    marginTop: StatusBar.currentHeight,
-  },
-});

@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
-import { StackNavigator } from 'react-navigation';
-import MainMenu from './Components/Menu';
+import { BackHandler } from 'react-native';
+import { createStackNavigator } from 'react-navigation';
+import MainMenu from '../Screens/Menu';
+import GameScreen from '../Screens/GameScreen';
 
-export default createStackNavigator({
+const RootStackNav = createStackNavigator({
   MainMenu: {
     screen:MainMenu,
   },
@@ -12,4 +14,25 @@ export default createStackNavigator({
   GameScreen:{
     screen:GameScreen,
   }
-}, { header:null });
+}, {
+  headerMode:"none",
+  initialRouteName:"GameScreen"
+});
+
+export default class extends Component {
+
+  componentDidMount() {
+    
+  }
+
+  componentWillUnmount() {
+
+  }
+
+  render() {
+    return (
+      <RootStackNav />
+    )
+  }
+
+}
