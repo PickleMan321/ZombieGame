@@ -12,7 +12,7 @@ const RootStackNav = createStackNavigator({
     screen:MainMenu,
   },
   GameScreen:{
-    screen:GameScreen,
+    screen:MainMenu,
   }
 }, {
   headerMode:"none",
@@ -22,7 +22,7 @@ const RootStackNav = createStackNavigator({
 export default class extends Component {
 
   componentDidMount() {
-    
+
   }
 
   componentWillUnmount() {
