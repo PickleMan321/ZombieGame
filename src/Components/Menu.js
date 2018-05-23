@@ -14,12 +14,14 @@ render(){
     />
   <Button
     onPress={startButton}
+    style={styles.button}
     title="Start"
     color="#841584"
   />
 
   <Button
     onPress={loadButton}
+    style={styles.button}
     title="Load"
     color="#841584"
   />
@@ -31,6 +33,10 @@ render(){
 
 const styles= StyleSheet.create({
   image:{
+    button:{
+      backgroundColor: '#24662d'
+      borderWidth: '1'
+    }
     backgroundColor: '#700d0d',
     flex: 1,
     position: 'absolute',
