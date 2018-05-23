@@ -3,6 +3,9 @@ import { Button, Image, StyleSheet, View } from 'react-native';
 
 export default class Menu extends Component {
   render(){
+
+    const { navigate } = this.props.navigation;
+
     return(
       <View>
         <Image
@@ -11,13 +14,13 @@ export default class Menu extends Component {
           source={require('../../assets/fire.jpg')}
         />
         <Button
-          onPress={_=>console.log('Start')}
+          onPress={ ()=>navigate("GameScreen") }
           style={styles.button}
           title="Start"
           color="#841584"
         />
         <Button
-          onPress={_=>console.log("Load")}
+          onPress={ ()=>navigate("LoadMenu") }
           style={styles.button}
           title="Load"
           color="#841584"

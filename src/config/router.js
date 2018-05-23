@@ -16,13 +16,13 @@ const RootStackNav = createStackNavigator({
   }
 }, {
   headerMode:"none",
-  initialRouteName:"GameScreen"
+  initialRouteName:"MainMenu"
 });
 
 export default class extends Component {
 
   componentDidMount() {
-    
+
   }
 
   componentWillUnmount() {
