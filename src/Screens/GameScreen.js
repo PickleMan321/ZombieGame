@@ -24,7 +24,9 @@ export default class GameScreen extends React.Component {
     return null;
   }
 
-  handleScript() {
+  handleScript() { 
+    // FIXME: triggers don't respond to nonzero initial script indcies when the game loads. 
+    // revise the comparison operators to account for this.  
     this.setState({sentences: this.state.sentences + 1})
   }
 
@@ -36,7 +38,6 @@ export default class GameScreen extends React.Component {
         saves = saves.concat(JSON.parse(oldSaves));
       }
       await AsyncStorage.setItem(STORE_NAME+":"+SAVE_GAME_KEY, JSON.stringify(saves))
-      console.log(saves);
     } catch(e) {
       alert("Storage Error: " + e.message);
     }

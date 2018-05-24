@@ -1,16 +1,32 @@
 import React, { Component } from 'react';
-import { FlatList, Image, TouchableHighlight, StyleSheet, View, Text } from 'react-native';
-
-const dummySaves = [
-    { position: 5, date: new Date},
-    { position: 9, date: new Date},
-]
+import { FlatList, Image, TouchableHighlight, StyleSheet, View, Text, AsyncStorage } from 'react-native';
+import { STORE_NAME, SAVE_GAME_KEY } from '../config/constants';
 
 export default class LoadMenu extends Component {
+
+  constructor() {
+    super();
+    this.state = {
+      saves: [],
+    }
+  }
+
+  async componentDidMount() {
+    const saveJSON = await AsyncStorage.getItem(STORE_NAME+":"+SAVE_GAME_KEY);
+    const saves = JSON.parse(saveJSON).map( ({ position, date }) => ({
+      position, date: new Date(date)
+    }))
+
+    this.setState({ saves })
+
+  }
 
   render(){
 
     const { navigate, goBack } = this.props.navigation;
+    const { saves } = this.state
+
+    // TODO: add a delete button on saves in case it gets cluttered
 
     return (
       <View style={styles.container}>
@@ -23,7 +39,7 @@ export default class LoadMenu extends Component {
           <Text style={styles.headerText}>Saved Games</Text>
         </View>
         <FlatList 
-          data = { dummySaves }
+          data = { saves }
           renderItem = {({item:{position, date}, index}) => (
             <TouchableHighlight 
             style={styles.button}
