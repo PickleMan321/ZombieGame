@@ -9,9 +9,10 @@ import Characters from '../Components/Characters';
 
 export default class GameScreen extends React.Component {
 
-  constructor(){
-    super();
-    this.state = { sentences : 0 };
+  constructor(props){
+    super(props);
+    const { getParam } = props.navigation;
+    this.state = { sentences : getParam("position", 0) };
   }
 
   handlescript() {
