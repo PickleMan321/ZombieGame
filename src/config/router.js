@@ -26,7 +26,7 @@ export default class extends Component {
   }
 
   componentWillUnmount() {
-
+    
   }
 
   render() {
