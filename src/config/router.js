@@ -12,7 +12,7 @@ const RootStackNav = createStackNavigator({
     screen:MainMenu,
   },
   GameScreen:{
-    screen:MainMenu,
+    screen:GameScreen,
   }
 }, {
   headerMode:"none",
@@ -26,7 +26,7 @@ export default class extends Component {
   }
 
   componentWillUnmount() {
-    
+
   }
 
   render() {
