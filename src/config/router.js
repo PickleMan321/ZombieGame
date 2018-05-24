@@ -4,7 +4,7 @@ import { createStackNavigator } from 'react-navigation';
 import MainMenu from '../Screens/Menu';
 import GameScreen from '../Screens/GameScreen';
 
-const RootStackNav = createStackNavigator({
+export default createStackNavigator({
   MainMenu: {
     screen:MainMenu,
   },
@@ -18,21 +18,3 @@ const RootStackNav = createStackNavigator({
   headerMode:"none",
   initialRouteName:"MainMenu"
 });
-
-export default class extends Component {
-
-  componentDidMount() {
-
-  }
-
-  componentWillUnmount() {
-
-  }
-
-  render() {
-    return (
-      <RootStackNav />
-    )
-  }
-
-}
