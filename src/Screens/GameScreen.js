@@ -1,6 +1,7 @@
 import React from 'react';
-import { StyleSheet, Text, View, KeyboardAvoidingView, ImageBackground, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, KeyboardAvoidingView, ImageBackground, TouchableOpacity, AsyncStorage } from 'react-native';
 import { StackActions, NavigationActions } from 'react-navigation';
+import { STORE_NAME, SAVE_GAME_KEY } from '../config/constants';
 import Textbox from '../Components/Textbox';
 import TextInput from '../Components/TextInput';
 import ScriptArray from '../Components/ScriptArray';
@@ -17,7 +18,9 @@ export default class GameScreen extends React.Component {
   }
 
   static getDerivedStateFromProps({ navigation:{ getParam } }) {
-    if(getParam("position")) return { sentences: getParam("position") };
+    if(getParam("position")) {
+      return { sentences: getParam("position") };
+    }
     return null;
   }
 
@@ -25,8 +28,18 @@ export default class GameScreen extends React.Component {
     this.setState({sentences: this.state.sentences + 1})
   }
 
-  handleSave() {
-
+  async handleSave() {
+    try {
+      let saves = [{date:new Date, position:this.state.sentences}];
+      const oldSaves = await AsyncStorage.getItem(STORE_NAME+":"+SAVE_GAME_KEY);
+      if(oldSaves) {
+        saves = saves.concat(JSON.parse(oldSaves));
+      }
+      await AsyncStorage.setItem(STORE_NAME+":"+SAVE_GAME_KEY, JSON.stringify(saves))
+      console.log(saves);
+    } catch(e) {
+      alert("Storage Error: " + e.message);
+    }
   }
 
   handleExit() {
