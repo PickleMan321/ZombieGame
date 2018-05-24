@@ -8,7 +8,7 @@ export default class Menu extends Component {
 
     return(
       <View>
-        <Image
+        <Image 
           style={styles.image}
           resizeMode='cover'
           source={require('../../assets/fire.jpg')}
