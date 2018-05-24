@@ -1,12 +1,17 @@
 import React, { Component } from 'react';
-import { Button, Image, StyleSheet, View } from 'react-native';
+import { FlatList, Button, StyleSheet, View } from 'react-native';
 
-export default class Menu extends Component {
+const dummySaves = [
+    { position: 5, date: new Date},
+    { position: 9, date: new Date},
+]
+
+export default class LoadMenu extends Component {
   render(){
 
     const { navigate } = this.props.navigation;
 
-    return(
+    return (
       <View>
         <Image 
           style={styles.image}
