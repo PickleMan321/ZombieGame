@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { FlatList, Button, StyleSheet, View } from 'react-native';
+import { FlatList, Image, TouchableHighlight, StyleSheet, View, Text } from 'react-native';
 
 const dummySaves = [
     { position: 5, date: new Date},
@@ -7,35 +7,38 @@ const dummySaves = [
 ]
 
 export default class LoadMenu extends Component {
+
   render(){
 
     const { navigate } = this.props.navigation;
 
     return (
-      <View>
+      <View style={styles.container}>
         <Image 
           style={styles.image}
           resizeMode='cover'
           source={require('../../assets/fire.jpg')}
         />
-        <Button
-          onPress={ ()=>navigate("GameScreen") }
-          style={styles.button}
-          title="Start"
-          color="#841584"
-        />
-        <Button
-          onPress={ ()=>navigate("LoadMenu") }
-          style={styles.button}
-          title="Load"
-          color="#841584"
-        />
+        <FlatList 
+          data = { dummySaves }
+          renderItem = {({item:{position, date}, index}) => (
+            <TouchableHighlight 
+            style={styles.button}
+            onPress={() => navigate("GameScreen", { position })}>
+              <Text >{date.toLocaleDateString()} {date.toLocaleTimeString()}</Text>
+            </TouchableHighlight>
+          )}
+          keyExtractor={(item, key) => ""+key}/>
       </View>
     )
   }
 }
 
 const styles= StyleSheet.create({
+  container: {
+    alignItems:'center',
+    flex:1,
+  },
   image:{
     backgroundColor: '#700d0d',
     position: 'absolute',
@@ -46,7 +49,9 @@ const styles= StyleSheet.create({
     zIndex:-1,
   },
   button:{
-    backgroundColor: '#24662d',
-    borderWidth:1
+    padding:10,
+    width:300,
+    height:50,
+    backgroundColor:'white',
   },
 })
