@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, KeyboardAvoidingView, ImageBackground } from 'react-native';
+import { StyleSheet, Text, View, KeyboardAvoidingView, ImageBackground, TouchableOpacity } from 'react-native';
 import Textbox from '../Components/Textbox';
 import TextInput from '../Components/TextInput';
 import ScriptArray from '../Components/ScriptArray';
@@ -15,15 +15,31 @@ export default class GameScreen extends React.Component {
     this.state = { sentences : getParam("position", 0) };
   }
 
-  handlescript() {
+  handleScript() {
     this.setState({sentences: this.state.sentences + 1})
+  }
+
+  handleSave() {
+
+  }
+
+  handleExit() {
+
+  }
+
+  handleLoad() {
+
   }
 
   render() {
     return (
       <Background index = {this.state.sentences}>
         <Characters index = {this.state.sentences}/>
-        <Textbox index = {this.state.sentences}  handle= {this.handlescript.bind(this)}/>
+        <Textbox index={this.state.sentences} 
+        handle={this.handleScript.bind(this)}
+        saveGame={this.handleSave.bind(this)}
+        exitGame={this.handleExit}
+        loadGame={this.handleLoad}/>
         <Modal index = {this.state.sentences}/>
       </Background>
     );
