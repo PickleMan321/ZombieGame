@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View, KeyboardAvoidingView, ImageBackground, TouchableOpacity } from 'react-native';
+import { StackActions, NavigationActions } from 'react-navigation';
 import Textbox from '../Components/Textbox';
 import TextInput from '../Components/TextInput';
 import ScriptArray from '../Components/ScriptArray';
@@ -15,6 +16,11 @@ export default class GameScreen extends React.Component {
     this.state = { sentences : getParam("position", 0) };
   }
 
+  static getDerivedStateFromProps({ navigation:{ getParam } }) {
+    if(getParam("position")) return { sentences: getParam("position") };
+    return null;
+  }
+
   handleScript() {
     this.setState({sentences: this.state.sentences + 1})
   }
@@ -24,11 +30,14 @@ export default class GameScreen extends React.Component {
   }
 
   handleExit() {
-
+    this.props.navigation.dispatch(StackActions.reset({ 
+      index:0,
+      actions:[ NavigationActions.navigate({ routeName:"MainMenu" })],
+    }));
   }
 
   handleLoad() {
-
+    this.props.navigation.navigate("LoadMenu");
   }
 
   render() {
@@ -38,8 +47,8 @@ export default class GameScreen extends React.Component {
         <Textbox index={this.state.sentences} 
         handle={this.handleScript.bind(this)}
         saveGame={this.handleSave.bind(this)}
-        exitGame={this.handleExit}
-        loadGame={this.handleLoad}/>
+        exitGame={this.handleExit.bind(this)}
+        loadGame={this.handleLoad.bind(this)}/>
         <Modal index = {this.state.sentences}/>
       </Background>
     );

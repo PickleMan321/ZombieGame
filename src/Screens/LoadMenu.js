@@ -10,7 +10,7 @@ export default class LoadMenu extends Component {
 
   render(){
 
-    const { navigate } = this.props.navigation;
+    const { navigate, goBack } = this.props.navigation;
 
     return (
       <View style={styles.container}>
@@ -19,6 +19,9 @@ export default class LoadMenu extends Component {
           resizeMode='cover'
           source={require('../../assets/fire.jpg')}
         />
+        <View style={styles.header}>
+          <Text style={styles.headerText}>Saved Games</Text>
+        </View>
         <FlatList 
           data = { dummySaves }
           renderItem = {({item:{position, date}, index}) => (
@@ -29,6 +32,11 @@ export default class LoadMenu extends Component {
             </TouchableHighlight>
           )}
           keyExtractor={(item, key) => ""+key}/>
+          <TouchableHighlight
+          style={styles.button}
+          onPress={_=>goBack()}>
+            <Text>Back</Text>
+          </TouchableHighlight>
       </View>
     )
   }
@@ -54,4 +62,14 @@ const styles= StyleSheet.create({
     height:50,
     backgroundColor:'white',
   },
+  header:{
+    height:50, 
+    backgroundColor:'white',
+    width:300,
+  },
+  headerText:{
+    textAlign:'center',
+    fontSize:30,
+    fontWeight:"bold",
+  }
 })
