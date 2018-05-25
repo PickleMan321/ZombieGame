@@ -84,7 +84,20 @@ Professor: “Seems like a bit of calculus should help us with this problem.”
 
 You look at him, now even more confused than ever. Calculus? Is he even taking this seriously?
 
-(Begin explaining the problem)
+Professor: Remember that velocity, or the speed you travel, is the integral of your position with respect to time. If you’re traveling in a circle, well, you can’t really make a position function with respect to time, because a circle isn’t differentiable at all points. Thus, your angle, rather than your x,y position, is measured. Thus your angular velocity, or the speed at which you travel in the circle, can be denoted as ∫dt, right?
+
+That was a lot to take in for you. You’re used to him talking and writing on the board to keep track of what he was saying. You did your best to envision the picture he was painting. Even so, you were still confused and asked where he was going with this.
+
+Professor: Well, remember that angular velocity is not the same as speed. Say I’m traveling at some velocity X in a circle around a zombie, and the zombie is chained to a stick in the ground. The zombie can’t actually move in any direction, but no matter how fast I’m going in my circle, if I turn to look at the zombie, the zombie will be facing in my direction.
+
+You process this in your head.
+
+So the zombie has the same angular velocity as I do, even though the zombie’s actual velocity is approximately  0. He’s proposing that we can, somehow, bunch up the zombies by making them slow down to a stop by running around the truck?
+
+You explain what you managed to get out his little lecture.
+
+Professor: Exactly! Now, angular velocity is equal to the speed divided by the radius of the circle (Va= s/r). So then, the truck blast radius is… 5 meters. How fast would we have to be going if we wanted to be able to circle around the truck twice to gather all the zombies around it and then get back to this building, if the doors are 60m from the truck? Assuming also that the truck will explode 1 minute after we light it, and, uh,  if we can run at 5 m.s while the zombies move at 0.5 m/s?
+
 
 
 
@@ -170,15 +183,13 @@ Both you and the professor looked around for anything you could use.
 
 After a few minutes, you both come back to show what you found.
 
-(Give at least 3-5 objects to choose from where the player will need to calculate each object to see which would be the lightest and most effective)
-
-You say: “Let’s take the sledgehammer!”
+You show off the sledgehammer thinking that that'll be more than enough to stop any zombie in its tracks.
 
 Professor: “Did you actually do the math?”
 
-“Of course I did… not…”
+Well, no, no you didn't but, hey, sledgehammers are cool.
 
-“A concussion can happen if you hit a zombie’s head with a force of 95 G’s, or 932 Newtons. Force = mass * acceleration, and …” //finish once we figure out how the hell to include calc.
+Professor:  “A concussion can happen if you hit a zombie’s head with a force of 95 G’s, or 932 Newtons. Force = mass x acceleration. Now, acceleration is the second derivative of distance with respect to velocity. If we take the distance equation to be d(t) = 1/2x^3 - 3x^2 + 4x +.15 m, what is the mass of the hammer we need to give the zombie a concussion and scare it away?”
 
 
 
@@ -200,7 +211,33 @@ Professor: “If we can figure out who won’t make it, then maybe we can find w
 
 You didn’t like the idea of picking who will live and die, but you thought that this would be the safest bet.
 
-(Start talking about who won’t make. Math and stuff)
+Professor: “Well, come on, don’t just stand there, get a watch!"
+
+You quickly go back to look at the people running.
+
+ Professor: "OK, now that redhead over there looks like she’s 20 m from the zombies, but… yeah, she’s slowing down at a constant rate. If her acceleration is -.25 m/s^2, she’s currently going at 4 m/s, and she’s 20m ahead of the zombies going .5 m/s behind her, will she reach that building 100 m ahead of her?"
+
+//answer here
+
+You quickly tell the professor.
+
+Professor: "OK, now what about the brunette? She looks like she’s going at a steady clip, but she’s a bit slower than the zombies… If she’s going at .4 m/s, and the zombies are 60 m behind her traveling at .5 m/s, will she make it to the bank 120 m in front of her?"
+
+//answer here
+
+Hoping you're right, you let the professor know.
+
+Professor: "Mkay, sounds good, but let’s see about the guy in the wheelchair. He’s coasting down the hill now, but he’ll slow down when he starts going uphill. If we model his acceleration as 2(54x^3 - 63x^2 - 54x + 7)/(3x^2 + 1)^3 , his velocity is 2 m/s, and the zombies are currently 15m behind him going .5 m/s, will he make it to the building 200m ahead of him?"
+
+//answer here
+
+Hoping you haven't spend too much time figuring out math and actually help save people, you ask the professor what's next.
+
+Professor: "We have everything we need, we just need to make the call now before it's too late."
+
+
+//Figure out if anyone needs saving
+
 
 
 
@@ -231,7 +268,20 @@ Professor: “Now you’re getting the hang of it. So, I’m thinking of using (
 
 You ask him to explain.
 
-(problem talking)
+Professor: "Remember how we calculated the shortest route to the hospital using derivatives?""
+
+You nod.
+
+Professor: "Well, we can do the same thing backwards using an integral to find out how far away the outbreak started if we know how fast the zombies travel and when the outbreak started."
+
+Professor: "So, assuming that zombies travel at .25m/s on average, and the outbreak started 4 hours before the zombies showed up on campus, how far must the source be?"
+
+//answer here
+
+The professor draws a circle around the campus on the map.
+
+Professor: “Ah, figures. Guys, we’re going to Harvard.”
+
 
 
 Hour 32
@@ -268,7 +318,16 @@ Professor: “The rate of their movement isn’t as we originally calculated bec
 
 You ask what he means by that.
 
-Professor: “(Explains)”
+Professor: "Well, we calculated a constant rate of movement for zombies, right? But if zombies stop to bite people more frequently, they move slower. So, if the zombie outbreak starts in the middle of a city, there’s a bunch of people to stop and bite, and they don’t travel as fast.”
+
+The professor mutters to himself and draws some complicated curves on a scrap of paper.
+
+Professor: “Mhm, yup… so this must go here… There we go!”
+
+Professor: "So, if we model the speed of the zombies as .25x^4 -5x^3+2x^2+7x based on the population geography between Boston and campus, and it took four hours for the zombies from the outbreak to reach campus, where did this outbreak start?"
+
+//answer here
+
 
 
 
@@ -302,41 +361,72 @@ You explain and lead him towards the truck.
 As you both reach the truck, climb in, and check the gas, you realize there isn’t much gas left. Nearly empty. The truck may not even start…
 Professor: “Looks like we’ll need to plan this out. We’re going to need the right distance to the wall without running out of gas…”
 
-Professor: (Explain)
+Professor: "Trucks like this usually travel 10 mpg, or 16,900 m/gallon. If there is ⅛  of a gallon left in the truck, how close does it have to be to the wall to hit the wall with 1/16 of the gas tank left for a getaway?"
+
+//answer here
+
+
+Hour 37
+
+You all run through the building, each going your own way, searching for where the lab is.
+
+After a few minutes you hear someone yell.
+
+Adam: "Over here!"
+
+You and the professor meet back in front of what looks like a lab where Adam called out.
+
+You both enter the room.
+
+Professor: "Well, it looks like the lab. But..."
+
+You notice the lab is in disrepair. You could barely call it a lab at this point.
+
+Adam: "If this is where it all started, it shows."
+
+You all look around trying to figure anything out about the source. Hoping maybe the answer lies within this lab.
+
+Professor: "Anyone find anything?"
+
+Adam: "If you mean broken glass and weird goo, then yeah, I found a lot of that."
+
+You ignore Adams attempt at a joke.
+
+You find a seculded room within the lab that looked worse than the room you were already in. The walls were covered with weird forking pulsating strings, which reminded you to something similar as human veins.
+
+You signal the Professor and Adam that you may have found what you were looking for.
+
+The room was dark, but the veins on the wall gave light with each pump. You could make out some sort of object behind some glass.
+
+Professor: "My word..."
+
+Adam: "Uh, anyone know what that is?"
+
+Professor: "Looks like that might be what we need to make a cure..."
+
+Adam: "Sure we don't, like, smash it? And the world will be saved?"
+
+Professor: "Please don't do that..."
+
+You all approach the object, noticing it beating in rhythm with the walls.
+
+Professor: "Boys, if you would give me some time alone here... I may be a math teacher, but I know a thing or two outside that field."
+
+You question what he plans on doing, but you and Adam just wait outside patiently.
+
 
 
 Hour 38
 
-You looked for every way in, but there was none. It was locked up and shut down from all areas. This had to be it though. This had to be the eye of the storm.
+Finally, after waiting for who knows how long, the Professor back out.
 
-Professor: “There doesn’t seem to be a way in that I can find. How about you guys?”
+Professor: "I think we may have the solution to this whole problem."
 
-Adam: “Nothing here.”
+He says as he holds up a vial of some black looking liquid.
 
-You shake your head. This can’t be what stops you; a locked door? You looked around, there had to be a way in. There had to be.
+Professor: "This is our cure."
 
-Adam: “Well, I could, like, knock the door down?”
-
-Professor: “I doubt you can do that nor do I suggest even trying…”
-
-Adam: “Your loss.”
-
-As they talked on, you notice a truck in the distance, and nearly a clear route towards the lab. You began thinking of a plan…
-
-The professor takes notice of you.
-
-Professor: “What are you thinking?
-
-You explain and lead him towards the truck.
-
-As you both reach the truck, climb in, and check the gas, you realize there isn’t much gas left. Nearly empty. The truck may not even start…
-Professor: “Looks like we’ll need to plan this out. We’re going to need the right distance to the wall without running out of gas…”
-
-Professor: (Explain)
-
-Hour 39
-
-With this act, you may not have stopped the virus, but you managed to prevent it from spreading anymore.
+With this, you may not have stopped the virus, but you do have the cure for it.
 
 Things finally started looking up for once.
 

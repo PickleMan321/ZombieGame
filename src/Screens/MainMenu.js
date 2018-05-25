@@ -7,8 +7,8 @@ export default class Menu extends Component {
     const { navigate } = this.props.navigation;
 
     return (
-      <View>
-        <Image 
+      <View style={styles.container}>
+        <Image
           style={styles.image}
           resizeMode='cover'
           source={require('../../assets/fire.jpg')}
@@ -17,13 +17,13 @@ export default class Menu extends Component {
           onPress={ ()=>navigate("GameScreen") }
           style={styles.button}
           title="Start"
-          color="#841584"
+          color="#000000"
         />
         <Button
           onPress={ ()=>navigate("LoadMenu") }
           style={styles.button}
           title="Load"
-          color="#841584"
+          color="#000000"
         />
       </View>
     )
@@ -31,6 +31,12 @@ export default class Menu extends Component {
 }
 
 const styles= StyleSheet.create({
+  container: {
+    flex:1,
+    justifyContent: 'space-around',
+    justifyContent: 'center',
+    
+  },
   image:{
     backgroundColor: '#700d0d',
     position: 'absolute',
@@ -41,7 +47,7 @@ const styles= StyleSheet.create({
     zIndex:-1,
   },
   button:{
-    backgroundColor: '#24662d',
-    borderWidth:1
+    borderWidth:1,
+
   },
 })
