@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { FlatList, Image, TouchableHighlight, StyleSheet, View, Text, AsyncStorage } from 'react-native';
+import { FlatList, Image, TouchableOpacity, StyleSheet, View, Text, AsyncStorage } from 'react-native';
 import { STORE_NAME, SAVE_GAME_KEY } from '../config/constants';
 
 export default class LoadMenu extends Component {
@@ -21,12 +21,18 @@ export default class LoadMenu extends Component {
 
   }
 
+  async deleteSave(index) {
+    const { saves } = this.state;
+    let newSaves = saves.slice();
+    newSaves.splice(index,1);
+    await AsyncStorage.setItem(STORE_NAME+":"+SAVE_GAME_KEY, JSON.stringify(newSaves));
+    this.setState({ saves:newSaves });
+  }
+
   render(){
 
     const { navigate, goBack } = this.props.navigation;
     const { saves } = this.state
-
-    // TODO: add a delete button on saves in case it gets cluttered
 
     return (
       <View style={styles.container}>
@@ -41,18 +47,33 @@ export default class LoadMenu extends Component {
         <FlatList
           data = { saves }
           renderItem = {({item:{position, date}, index}) => (
+<<<<<<< HEAD
             <TouchableHighlight
             style={styles.button}
             onPress={() => navigate("GameScreen", { position })}>
               <Text >{date.toLocaleDateString()} {date.toLocaleTimeString()}</Text>
             </TouchableHighlight>
+=======
+            <View style={styles.row}>
+              <TouchableOpacity
+              style={{ flex:1 }}
+              onPress={() => navigate("GameScreen", { position })}>
+                <Text style={styles.buttonText}>{date.toLocaleDateString()} {date.toLocaleTimeString()}</Text>
+              </TouchableOpacity>
+              <TouchableOpacity
+              style={styles.deleteButton}
+              onPress={this.deleteSave.bind(this)}>
+                <Text style={{ fontSize:20 }}>&#10008;</Text>
+              </TouchableOpacity>
+            </View>
+>>>>>>> a9e1578bea60f15e3b6346014a0cb9811727cd7d
           )}
           keyExtractor={(item, key) => ""+key}/>
-          <TouchableHighlight
-          style={styles.button}
+          <TouchableOpacity
+          style={styles.row}
           onPress={_=>goBack()}>
-            <Text>Back</Text>
-          </TouchableHighlight>
+            <Text style={styles.buttonText}>Back</Text>
+          </TouchableOpacity>
       </View>
     )
   }
@@ -72,10 +93,20 @@ const styles= StyleSheet.create({
     right:0,
     zIndex:-1,
   },
+<<<<<<< HEAD
   button:{
     padding:15,
     width:300,
     height:50,
+=======
+  row:{
+    padding:10,
+    width:300,
+    height:50,
+    backgroundColor:'white',
+    flexDirection:'row',
+    borderWidth:1,
+>>>>>>> a9e1578bea60f15e3b6346014a0cb9811727cd7d
   },
   header:{
     height:50,
@@ -86,5 +117,13 @@ const styles= StyleSheet.create({
     textAlign:'center',
     fontSize:30,
     fontWeight:"bold",
+  },
+  buttonText: {
+    fontSize:20,
+  },
+  deleteButton: {
+    width: 30,
+    alignItems:'flex-end',
+    justifyContent:'center'
   }
 })
