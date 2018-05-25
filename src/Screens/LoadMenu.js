@@ -30,7 +30,7 @@ export default class LoadMenu extends Component {
 
     return (
       <View style={styles.container}>
-        <Image 
+        <Image
           style={styles.image}
           resizeMode='cover'
           source={require('../../assets/fire.jpg')}
@@ -38,10 +38,10 @@ export default class LoadMenu extends Component {
         <View style={styles.header}>
           <Text style={styles.headerText}>Saved Games</Text>
         </View>
-        <FlatList 
+        <FlatList
           data = { saves }
           renderItem = {({item:{position, date}, index}) => (
-            <TouchableHighlight 
+            <TouchableHighlight
             style={styles.button}
             onPress={() => navigate("GameScreen", { position })}>
               <Text >{date.toLocaleDateString()} {date.toLocaleTimeString()}</Text>
@@ -73,13 +73,12 @@ const styles= StyleSheet.create({
     zIndex:-1,
   },
   button:{
-    padding:10,
+    padding:15,
     width:300,
     height:50,
-    backgroundColor:'white',
   },
   header:{
-    height:50, 
+    height:50,
     backgroundColor:'white',
     width:300,
   },
