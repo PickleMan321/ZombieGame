@@ -47,13 +47,6 @@ export default class LoadMenu extends Component {
         <FlatList
           data = { saves }
           renderItem = {({item:{position, date}, index}) => (
-<<<<<<< HEAD
-            <TouchableHighlight
-            style={styles.button}
-            onPress={() => navigate("GameScreen", { position })}>
-              <Text >{date.toLocaleDateString()} {date.toLocaleTimeString()}</Text>
-            </TouchableHighlight>
-=======
             <View style={styles.row}>
               <TouchableOpacity
               style={{ flex:1 }}
@@ -66,7 +59,6 @@ export default class LoadMenu extends Component {
                 <Text style={{ fontSize:20 }}>&#10008;</Text>
               </TouchableOpacity>
             </View>
->>>>>>> a9e1578bea60f15e3b6346014a0cb9811727cd7d
           )}
           keyExtractor={(item, key) => ""+key}/>
           <TouchableOpacity
@@ -93,12 +85,6 @@ const styles= StyleSheet.create({
     right:0,
     zIndex:-1,
   },
-<<<<<<< HEAD
-  button:{
-    padding:15,
-    width:300,
-    height:50,
-=======
   row:{
     padding:10,
     width:300,
@@ -106,7 +92,6 @@ const styles= StyleSheet.create({
     backgroundColor:'white',
     flexDirection:'row',
     borderWidth:1,
->>>>>>> a9e1578bea60f15e3b6346014a0cb9811727cd7d
   },
   header:{
     height:50,
