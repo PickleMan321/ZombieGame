@@ -3,9 +3,9 @@ import { Alert, Modal, Text, TouchableHighlight, View, StyleSheet, TextInput, Im
 
 const questions = [
   {
-    text: "What is the derivative of a constant?",
+    text: "How fast would we have to be going if we wanted to be able to circle around the truck twice to gather all the zombies around it and then get back to this building?",
     type:"mc",
-    triggerIndex: 38,
+    triggerIndex: 42,
     onCorrect() {
       alert("You got it!");
       return true;
