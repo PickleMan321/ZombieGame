@@ -160,7 +160,7 @@ export default class ModalExample extends Component {
           animationType="slide"
           transparent={false}
           visible={this.state.modalVisible}
-          onRequestClose={() => this.setModalVisible()}>
+          onRequestClose={() => alert("Answer the question before leaving.")}>
           { question && this.renderQuestion(question) }
         </Modal>
 

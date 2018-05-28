@@ -25,12 +25,21 @@ export default class extends React.Component {
     }
   }
 
-static getDerivedStateFromProps(props){
-  const imgBack = images.find(img => props.index===img.triggerIndex)
-  if(!imgBack) return null;
+static getDerivedStateFromProps(props,state){
+  const imgBack = images.sort((a,b) => {
+    if(a.triggerIndex > b.triggerIndex) return 1;
+    if(a.triggerIndex < b.triggerIndex) return -1;
+    if(a.triggerIndex === b.triggerIndex) return 0;
+  })
+  .filter(img => props.index > img.triggerIndex)
+  if(!imgBack || imgBack.length === 0) return null;
+  const currentImg = imgBack[imgBack.length-1];
+  if(currentImg.img === state.image) return null;
   return {
-    image:imgBack.img
+    image:currentImg.img
   }
+
+
 }
   render(){
   return (
