@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Alert, Modal, Text, TouchableHighlight, View, StyleSheet, TextInput, Image, Button } from 'react-native';
+import { Alert, Modal, Text, TouchableHighlight, View, StyleSheet, TextInput, Image, Button, ScrollView } from 'react-native';
 
 const questions = [
   {
@@ -137,14 +137,10 @@ export default class ModalExample extends Component {
     const { choices, type, image, text } = question;
 
     return(
-      <View style={styles.container}>
-
+      <View style={styles.content} >
         { text && <Text style = {styles.questionText}>{text}</Text> }
         { image && <Image source={image} style={styles.questionImage} resizeMode="contain"/> }
         { type === "mc" ? this.renderChoices(question, choices) : this.renderInput(question) }
-
-
-
       </View>
     )
   }
@@ -161,7 +157,9 @@ export default class ModalExample extends Component {
           transparent={false}
           visible={this.state.modalVisible}
           onRequestClose={() => alert("Answer the question before leaving.")}>
+          <ScrollView contentContainerStyle={styles.container}>
           { question && this.renderQuestion(question) }
+          </ScrollView>
         </Modal>
 
 
@@ -172,14 +170,16 @@ export default class ModalExample extends Component {
 
 const styles = StyleSheet.create({
   container:{
-    opacity:100,
-    alignItems: 'center',
-    justifyContent: 'space-around',
     flex:1,
     backgroundColor:'skyblue'
   },
+  content:{
+    alignItems: 'center',
+    justifyContent: 'space-around',
+  },
   choice: {
-    padding:5,
+    padding:4,
+    margin:5,
     borderWidth:1,
     borderColor:'gray',
     width:"100%",
