@@ -1,15 +1,19 @@
 import React, { Component } from 'react';
 import { Alert, Modal, Text, TouchableHighlight, View, StyleSheet, TextInput, Image, Button } from 'react-native';
 
+const wait = time => new Promise( s => setTimeout(s, time) )
+const answerCorrect = async function() {
+  await wait(500);
+  alert("You got it!");
+  return true;
+}
+
 const questions = [
   {
     text: "How fast would we have to be going if we wanted to be able to circle around the truck twice to gather all the zombies around it and then get back to this building?",
     type:"mc",
     triggerIndex: 43,
-    onCorrect() {
-      alert("You got it!");
-      return true;
-    },
+    onCorrect:answerCorrect,
     onWrong:()=>alert("Nope. Try again!"),
     choices: [
       { text:"0", correct:true },
@@ -22,10 +26,7 @@ const questions = [
     text: "If her acceleration is -.25 m/s^2, she’s currently going at 4 m/s, and she’s 20m ahead of the zombies going .5 m/s behind her, will she reach that building 100 m ahead of her?",
     type:"mc",
     triggerIndex: 99,
-    onCorrect() {
-      alert("You got it!");
-      return true;
-    },
+    onCorrect:answerCorrect,
     onWrong:()=>alert("Nope. Try again!"),
     choices: [
       { text:"0", correct:true },
@@ -38,10 +39,7 @@ const questions = [
     text: "If she’s going at .4 m/s, and the zombies are 60 m behind her traveling at .5 m/s, will she make it to the bank 120 m in front of her?",
     type:"mc",
     triggerIndex: 101,
-    onCorrect() {
-      alert("You got it!");
-      return true;
-    },
+    onCorrect:answerCorrect,
     onWrong:()=>alert("Nope. Try again!"),
     choices: [
       { text:"0", correct:true },
@@ -54,10 +52,7 @@ const questions = [
     text: "If we model his acceleration as 2(54x^3 - 63x^2 - 54x + 7)/(3x^2 + 1)^3 , his velocity is 2 m/s, and the zombies are currently 15m behind him going .5 m/s, will he make it to the building 200m ahead of him?",
     type:"mc",
     triggerIndex: 103,
-    onCorrect() {
-      alert("You got it!");
-      return true;
-    },
+    onCorrect:answerCorrect,
     onWrong:()=>alert("Nope. Try again!"),
     choices: [
       { text:"0", correct:true },
@@ -70,10 +65,7 @@ const questions = [
     text: "Who should we save?",
     type:"mc",
     triggerIndex: 107,
-    onCorrect() {
-      alert("You got it!");
-      return true;
-    },
+    onCorrect:answerCorrect,
     onWrong:()=>alert("Nope. Try again!"),
     choices: [
       { text:"The redhead!", correct:true },
@@ -86,10 +78,7 @@ const questions = [
     text: "If we take the distance equation to be d(t) = 1/2x^3 - 3x^2 + 4x +.15 m, what is the mass of the hammer we need to give the zombie a concussion and scare it away?",
     type:"mc",
     triggerIndex: 89,
-    onCorrect() {
-      alert("You got it!");
-      return true;
-    },
+    onCorrect:answerCorrect,
     onWrong:()=>alert("Nope. Try again!"),
     choices: [
       { text:"0" },
@@ -102,10 +91,7 @@ const questions = [
     text: "Assume that zombies travel at .25m/s on average, and the outbreak started 4 hours before the zombies showed up on campus, how far must the source be?",
     type:"mc",
     triggerIndex: 123,
-    onCorrect() {
-      alert("You got it!");
-      return true;
-    },
+    onCorrect:answerCorrect,
     onWrong:()=>alert("Nope. Try again!"),
     choices: [
       { text:"3600 meters?", correct:true },
@@ -119,10 +105,7 @@ const questions = [
     answer: 8,
     type:'num',
     triggerIndex:146,
-    onCorrect() {
-      alert("You got it!");
-      return true;
-    },
+    onCorrect:answerCorrect,
     onWrong:()=>alert("Nope. Try again!"),
   }
 ]
