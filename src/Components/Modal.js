@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Alert, Modal, Text, TouchableHighlight, View, StyleSheet, TextInput, Image, Button } from 'react-native';
+import { Alert, Modal, Text, TouchableHighlight, View, StyleSheet, TextInput, Image, Button, ScrollView } from 'react-native';
 
 const wait = time => new Promise( s => setTimeout(s, time) )
 const answerCorrect = async function() {
@@ -183,7 +183,7 @@ export default class ModalExample extends Component {
     const { choices, type, image, text } = question;
 
     return(
-      <View style={styles.container}>
+      <ScrollView style={styles.modal} contentContainerStyle={styles.container} >
 
         { text && <Text style = {styles.questionText}>{text}</Text> }
         { image && <Image source={image} style={styles.questionImage} resizeMode="contain"/> }
@@ -191,7 +191,7 @@ export default class ModalExample extends Component {
 
 
 
-      </View>
+      </ScrollView>
     )
   }
 
@@ -217,15 +217,16 @@ export default class ModalExample extends Component {
 }
 
 const styles = StyleSheet.create({
-  container:{
-    opacity:100,
-    alignItems: 'center',
-    justifyContent: 'space-around',
+  modal:{
     flex:1,
     backgroundColor:'skyblue'
   },
+  container: {
+    alignItems:"center",
+  },
   choice: {
-    padding:5,
+    margin:5,
+    padding:4,
     borderWidth:1,
     borderColor:'gray',
     width:"100%",
