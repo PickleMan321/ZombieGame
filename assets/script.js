@@ -1,7 +1,6 @@
-
-
 const sentences = `
 Hour 1
+
 You began your day like every other day, waking up late, skipping breakfast, panicly running to make it to class on time, and cutting it close by two minutes as your teacher counts attendance.
 
 This was normal for you. This was a habit for you. You never got in trouble for it, so you never bothered to change how your mornings go (despite how many times you tell yourself that you’ll stop going to bed by four).
@@ -10,31 +9,21 @@ When it came to school, you were never the brightest, but you were far from dumb
 
 You did well in pretty much every class you took, except for that one class you hate, calculus. To you, you never really understood the point of learning that stuff; what would you ever need to know any of that in your life? You know how to do taxes, that should be more than enough math to get by in life. Right?
 
-
-
 Hour 4
 
 It’s tough, but you were doing your best to stay awake during your calculus class. You browsed through everything on your phone so there was nothing left to keep your mind entertained. You sunk into your chair with disappointment as you tuned into what your professor was teaching.
 
 Before you even tried to understand what he was talking about, the professor calls out your name.
-Professor: “Hmm, how about you, in the back? Can you tell me what you got for an answer?” He asked pointing to the board.
 
+Professor: “Hmm, how about you, in the back? Can you tell me what you got for an answer?” He asked pointing to the board.
 
 You look up at the board in hopes to decrypt whatever he wrote on the board, maybe come up with an answer that doesn’t sound like I wasn’t paying attention. Looking at the board, you realize you have no idea what he wrote…
 
-
 You stare at the board long enough, maybe periodically look at your notes (blank paper) in hopes he’ll ask someone else.
-
-
 
 It was a good minute of silence of you pretending to try and figure out the problem. This was the longest minute of your life. You hoped he would just move on, but he was just staring at you expecting an answer to come out of your mouth any second. The silence was broken by a loud screech, some sort of explosion, and screaming.
 
-
-
  Not a moment later, the sound of loud screeching could be heard from outside, an explosion that sounded a little too close for comfort, and people screaming.
-
-
-
 
 The whole class got up from their seats to look out the window. You ran towards the window to check for myself and saw a truck crashed into the side of one of the buildings across from yours. Not only that, but there were bodies on the floor, a lot of bodies. You couldn’t make out any of the faces from where you stood.
 
@@ -96,15 +85,14 @@ So the zombie has the same angular velocity as I do, even though the zombie’s 
 
 You explain what you managed to get out his little lecture.
 
-Professor: Exactly! Now, angular velocity is equal to the speed divided by the radius of the circle (Va= s/r). So then, the truck blast radius is… 5 meters. How fast would we have to be going if we wanted to be able to circle around the truck twice to gather all the zombies around it and then get back to this building, if the doors are 60m from the truck? Assuming also that the truck will explode 1 minute after we light it, and, uh,  if we can run at 5 m.s while the zombies move at 0.5 m/s?
+Professor: Exactly! Now, angular velocity is equal to the speed divided by the radius of the circle (Va= s/r). So then, the truck blast radius is… 5 meters.
 
-
-
-
+ Professor: How fast would we have to be going if we wanted to be able to circle around the truck twice to gather all the zombies around it and then get back to this building, if the doors are 60m from the truck? Assuming also that the truck will explode 1 minute after we light it, and, uh,  if we can run at 5 m.s while the zombies move at 0.5 m/s?
 
 Chapter 2: Rush for help
 
 Hour 5
+
 We ran back inside as quickly as we could before the explosion; it was only a matter of seconds before the truck went off. We went back to the door we exited from, keeping away from the glass door. My body was rushing from excitement, any sec-
 
 A loud, painful explosion erupts from the campus, shaking the whole place. No way. It actually worked? You both look outside to see the outcome and to your amazement, almost all the zombies were gone; the campus was, for the most part, clear of zombies. Before you could even smile from your accomplishment, you could hear a pained scream from outside.
@@ -134,11 +122,12 @@ He flinches in pain.
 Adam: “Oh god, it freaking hurts. I don’t think I can walk.”
 
 Professor: “Ok, this can work.”
+
 You turn back at the professor and ask what he has in mind.
 
 Professor: “Ok, well…”
 
-He pulls out a map and a pen. (Normally, there would be more to this, like being in the car and the car having a map. But for shortness sake, he just has one).
+He pulls out a map and a pen.
 
 Professor: “I think we can find the fastest route with this. Yeah. Ok, so do you remember what integrals are?”
 
@@ -148,16 +137,7 @@ He starts drawing on the map.
 
 Professor: “So, hear me out…”
 
-(Begin explaining problem)
-
 Professor: “Remember that the derivative of distance with respect to time is velocity. If we know the expected speed we can manage on each road, and the length of the road, we can figure out which sequence of roads will get us to the hospital fastest!”
-
-(Display map with four routes, each with a different d and v(t), solve for t).
-
-
-
-
-
 
 Chapter 3: Escape
 
@@ -191,8 +171,6 @@ Well, no, no you didn't but, hey, sledgehammers are cool.
 
 Professor:  “A concussion can happen if you hit a zombie’s head with a force of 95 G’s, or 932 Newtons. Force = mass x acceleration. Now, acceleration is the second derivative of distance with respect to velocity. If we take the distance equation to be d(t) = 1/2x^3 - 3x^2 + 4x +.15 m, what is the mass of the hammer we need to give the zombie a concussion and scare it away?”
 
-
-
 Hour 15
 
 You could hear screaming from outside. You looked at the professor, nodded, stood up, and peeked through the window. You could see four people running from a couple of zombies. They were all in different locations, maybe a group? Regardless, they didn’t seem to have anything to defend themselves with.
@@ -217,32 +195,17 @@ You quickly go back to look at the people running.
 
  Professor: "OK, now that redhead over there looks like she’s 20 m from the zombies, but… yeah, she’s slowing down at a constant rate. If her acceleration is -.25 m/s^2, she’s currently going at 4 m/s, and she’s 20m ahead of the zombies going .5 m/s behind her, will she reach that building 100 m ahead of her?"
 
-//answer here
-
 You quickly tell the professor.
 
 Professor: "OK, now what about the brunette? She looks like she’s going at a steady clip, but she’s a bit slower than the zombies… If she’s going at .4 m/s, and the zombies are 60 m behind her traveling at .5 m/s, will she make it to the bank 120 m in front of her?"
-
-//answer here
 
 Hoping you're right, you let the professor know.
 
 Professor: "Mkay, sounds good, but let’s see about the guy in the wheelchair. He’s coasting down the hill now, but he’ll slow down when he starts going uphill. If we model his acceleration as 2(54x^3 - 63x^2 - 54x + 7)/(3x^2 + 1)^3 , his velocity is 2 m/s, and the zombies are currently 15m behind him going .5 m/s, will he make it to the building 200m ahead of him?"
 
-//answer here
-
 Hoping you haven't spend too much time figuring out math and actually help save people, you ask the professor what's next.
 
 Professor: "We have everything we need, we just need to make the call now before it's too late."
-
-
-//Figure out if anyone needs saving
-
-
-
-
-
-
 
 Chapter 4: Raid the Lab
 
@@ -264,7 +227,7 @@ You wonder if calculus would have the answer… So you ask.
 
 He chuckles.
 
-Professor: “Now you’re getting the hang of it. So, I’m thinking of using (math problem, integration? I think)”
+Professor: “Now you’re getting the hang of it.”
 
 You ask him to explain.
 
@@ -276,13 +239,9 @@ Professor: "Well, we can do the same thing backwards using an integral to find o
 
 Professor: "So, assuming that zombies travel at .25m/s on average, and the outbreak started 4 hours before the zombies showed up on campus, how far must the source be?"
 
-//answer here
-
 The professor draws a circle around the campus on the map.
 
 Professor: “Ah, figures. Guys, we’re going to Harvard.”
-
-
 
 Hour 32
 
@@ -326,13 +285,7 @@ Professor: “Mhm, yup… so this must go here… There we go!”
 
 Professor: "So, if we model the speed of the zombies as .25x^4 -5x^3+2x^2+7x based on the population geography between Boston and campus, and it took four hours for the zombies from the outbreak to reach campus, where did this outbreak start?"
 
-//answer here
-
-
-
-
 Chapter 5: I Meant the Other Lab
-
 
 Hour 36
 
@@ -362,9 +315,6 @@ As you both reach the truck, climb in, and check the gas, you realize there isn�
 Professor: “Looks like we’ll need to plan this out. We’re going to need the right distance to the wall without running out of gas…”
 
 Professor: "Trucks like this usually travel 10 mpg, or 16,900 m/gallon. If there is ⅛  of a gallon left in the truck, how close does it have to be to the wall to hit the wall with 1/16 of the gas tank left for a getaway?"
-
-//answer here
-
 
 Hour 37
 
@@ -414,11 +364,9 @@ Professor: "Boys, if you would give me some time alone here... I may be a math t
 
 You question what he plans on doing, but you and Adam just wait outside patiently.
 
-
-
 Hour 38
 
-Finally, after waiting for who knows how long, the Professor back out.
+Finally, after waiting for who knows how long, the Professor comes back out.
 
 Professor: "I think we may have the solution to this whole problem."
 

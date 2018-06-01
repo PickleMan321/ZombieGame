@@ -7,11 +7,11 @@ import {View, Text, ImageBackground, StyleSheet} from 'react-native';
   {img: require('../../assets/street.jpg') , triggerIndex: 0},
   {img: require('../../assets/classroom.jpg') , triggerIndex: 5},
   {img: require('../../assets/class_hallway.jpg') , triggerIndex: 16},
-  {img: require('../../assets/fire.jpg') , triggerIndex: 41},
-  {img: require('../../assets/hospital_bed.jpg') , triggerIndex: 65},
-  {img: require('../../assets/hospital_desk.jpg') , triggerIndex: 69},
-  {img: require('../../assets/hospital_room.jpg') , triggerIndex: 74},
-  {img: require('../../assets/abandoned_building.jpg') , triggerIndex: 82},
+  {img: require('../../assets/fire.jpg') , triggerIndex: 44},
+  {img: require('../../assets/hospital_bed.jpg') , triggerIndex: 69},
+  {img: require('../../assets/hospital_desk.jpg') , triggerIndex: 73},
+  {img: require('../../assets/hospital_room.jpg') , triggerIndex: 79},
+  {img: require('../../assets/abandoned_building.jpg') , triggerIndex: 85},
   {img: require('../../assets/lab.jpg') , triggerIndex: 123},
 ]
 
