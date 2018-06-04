@@ -205,7 +205,7 @@ Professor: "Mkay, sounds good, but let’s see about the guy in the wheelchair. 
 
 Hoping you haven't spend too much time figuring out math and actually help save people, you ask the professor what's next.
 
-Professor: "We have everything we need, we just need to make the call now before it's too late."
+Professor: "Phew, I guesss none of them really need saving. They'll all make it. Haha, that's quite a relief!"
 
 Chapter 4: Raid the Lab
 

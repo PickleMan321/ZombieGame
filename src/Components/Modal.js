@@ -10,7 +10,7 @@ const answerCorrect = async function() {
 
 const questions = [
   {
-    text: "Would we be able to make it back in time?",
+    text: "Would we be able to circle around the truck twice to gather all the zombies around it and get back to this building?",
     type:"mc",
     triggerIndex: 45,
     onCorrect:answerCorrect,
@@ -68,7 +68,7 @@ const questions = [
     ]
   },
   {
-    text: "If we take the distance equation to be d(t) = 1/2x^3 - 3x^2 + 4x +.15 m, what is the mass of the hammer we need to give the zombie a concussion and scare it away?",
+    text: "A concussion happens at 95G's or 932 Newtons. If we take the distance equation to be d(t) = 1/2x^3 - 3x^2 + 4x +.15 m, and it takes two seconds to swing, what is the mass of the hammer we need to give the zombie a concussion and scare it away?",
     type:"num",
     answer: 141.2,
     triggerIndex: 86,
@@ -92,7 +92,7 @@ const questions = [
     onWrong:()=>alert("Nope. Try again!"),
   },
   {
-    text: "If we model the of the speed of the zombies as 0.25x^4 -5x^3+2x^2+7x , based on the population geography between Boston and campus, and it taking four hours for the zombies to reach campus, where did this outbreak start??",
+    text: "If we model the of the speed of the zombies as 0.25t^4 -4.5t^3+2t^2+7t, where t is time, based on the population geography between Boston and campus, and it taking four hours for the zombies to reach campus, how far is the actual source??",
     answer: 214,
     type:'num',
     triggerIndex:143,
