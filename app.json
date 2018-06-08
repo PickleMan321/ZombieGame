@@ -1,27 +1,36 @@
 {
   "expo": {
-    "name": "ZombieGame",
-    "description": "This project is really great.",
-    "slug": "ZombieGame",
-    "privacy": "public",
-    "sdkVersion": "26.0.0",
-    "platforms": ["ios", "android"],
-    "version": "1.0.0",
-    "orientation": "portrait",
-    "icon": "./assets/icon.png",
-    "splash": {
-      "image": "./assets/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
-    },
-    "updates": {
-      "fallbackToCacheTimeout": 0
-    },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
-    "ios": {
-      "supportsTablet": true
-    }
-  }
-}
+      "name": "ZombieGame",
+      "description": "How to fight zombies with calculus",
+      "slug": "ZombieCalculus",
+      "privacy": "public",
+      "sdkVersion": "26.0.0",
+      "platforms": ["ios", "android"],
+      "version": "1.0.0",
+      "orientation": "portrait",
+      "icon": "./assets/icon.png",
+      "splash": {
+        "image": "./assets/splash.png",
+        "resizeMode": "contain",
+        "backgroundColor": "#ffffff"
+      },
+      "ios": {
+          "bundleIdentifier": "com.BonaventureUniversity.ZombieCalculus",
+           "supportsTablet": true
+      },
+      "android": {
+          "permissions": [],
+          "versionCode": 1,
+          "package": "com.BonaventureUniversity.ZombieCalculus"
+      },
+      "packagerOpts": {
+          "assetExts": [
+      "ttf",
+      "mp4",
+      "otf",
+      "xml"
+    ]
+      }
+      }
+      }
+
