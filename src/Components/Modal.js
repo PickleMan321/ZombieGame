@@ -76,7 +76,7 @@ const questions = [
     onWrong:()=>alert("Nope. Try again!"),
   },
   {
-    text: "Assume that zombies travel at .25m/s on average, and the outbreak started 4 hours before the zombies showed up on campus, how far must the source be?",
+    text: "Assume that zombies travel at .25m/s on average, and the outbreak started 4 hours before the zombies showed up on campus, how far must the source be? (Assume the use of km)",
     type:"num",
     answer: 3.6,
     triggerIndex: 121,
@@ -92,8 +92,8 @@ const questions = [
     onWrong:()=>alert("Nope. Try again!"),
   },
   {
-    text: "If we model the of the speed of the zombies as 0.25t^4 -4.5t^3+2t^2+7t, where t is time, based on the population geography between Boston and campus, and it taking four hours for the zombies to reach campus, how far is the actual source??",
-    answer: 214,
+    text: "If we model the of the speed of the zombies as 0.25t^4 -4.5t^3+2t^2+7t, where t is time, based on the population geography between Boston and campus, and it taking four hours for the zombies to reach campus, how far is the actual source?? (Assume the use of km)",
+    answer: 213,
     type:'num',
     triggerIndex:143,
     onCorrect:answerCorrect,
