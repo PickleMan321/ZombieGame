@@ -68,7 +68,7 @@ const questions = [
     ]
   },
   {
-    text: "A concussion happens at 95G's or 932 Newtons. If we take the distance equation to be d(t) = 1/2x^3 - 3x^2 + 4x +.15 m, and it takes two seconds to swing, what is the mass of the hammer we need to give the zombie a concussion and scare it away?",
+    text: "A concussion happens at 95G's or 932 Newtons. If we take the distance equation to be d(t) = 1/2x^3 - 3x^2 + 4x +.15 m, and it takes two seconds to swing, what is the mass, in kilograms, of the hammer we need to give the zombie a concussion and scare it away?",
     type:"num",
     answer: 141.2,
     triggerIndex: 86,
@@ -84,7 +84,7 @@ const questions = [
     onWrong:()=>alert("Nope. Try again!"),
   },
   {
-    text: "Trucks like this usually travel 10 mpg, or 16,900 m/gallon. If there is 1/50  of a gallon left in the truck, how close does it have to be to the wall to hit the wall with 1/100 of the gas tank left for a getaway?",
+    text: "Trucks like this usually travel 10 mpg, or 16,900 m/gallon. If there is 1/50  of a gallon left in the truck, how close, in meters, does it have to be to the wall to hit the wall with 1/100 of the gas tank left for a getaway?",
     type:"num",
     answer: 169,
     triggerIndex: 159,
