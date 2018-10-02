@@ -10,7 +10,8 @@ const answerCorrect = async function() {
 
 const questions = [
   {
-    text: "Would we be able to circle around the truck twice to gather all the zombies around it and get back to this building?",
+    text: "I. (Chapter 1 of Zombies Calculus) Before leaving MATH 152 today, you (very wisely) look out of the classroom window to see if there are any zombies lurking (or lurching) nearby. Sure enough, there's a big ol' zombie standing below the window near the De La Roche entrance. Although your calculus text is one of your most prized possessions, this is a matter of life or death, so you open the window, remove the screen, and drop the book on top of the undead creature's unkempt head. The height of the falling book is governed by the equation above where y is the height in feet above the ground and t is the time in seconds. (a) If the zombie is six feet tall, when does the book hit him? (b) At what velocity does the book hit the zombie? ",
+    image: require('../../assets/QuestionOne.png'),
     type:"mc",
     triggerIndex: 45,
     onCorrect:answerCorrect,
@@ -21,8 +22,7 @@ const questions = [
     ]
   },
   {
-    text: "Which is the fastest route?",
-    image: require('../../assets/zombiemap.png'),
+    text: "(Chapter 2 of Zombies Calculus) Suppose that a zombie infects about five people every hour and that the zombie outbreak began with one zombie. Let t be the time in hours since the first infection and let Z(t) be the total number of zombies after t hours. (a) Determine the total number of zombies after 0 hours, 1 hour, 2 hours, 3 hours, 4 hours, and 5 hours. Display your results in a table. (When computing the total number of zombies, include both the new zombies and the ones that are already present.) (b) Using the data you collected in part (a), find a simple formula for Z(t). Check that your formula predicts the results in your table. (c) The current world population is about 7.3 billion people. Based on your zombie population model, how long would it take for the entire world population to become zombies?",
     type:'mc',
     triggerIndex:70,
     onCorrect:answerCorrect,
@@ -35,7 +35,8 @@ const questions = [
     ]
   },
   {
-    text: "If her acceleration is -.25 m/s^2, she’s currently going at 4 m/s, and she’s 20m ahead of the zombies going .5 m/s behind her, will she reach that building 100 m ahead of her?",
+    text: "(Chapter 2 of Zombies Calculus) In Problem II, we assumed that a zombie infects about five people every hour and that the zombie outbreak began with one zombie. We saw that this assumption leads to the mathematical model above, where $t$ is the time in hours since the first infection and Z(t) is the total number of zombies after t hours. (a) What is the average rate of change of the number of zombies between $t=3$ and $t=4$ hours? (b) What is the instantaneous rate of change of the number of zombies at $t=4$ hours?",
+    image: require('../../assets/QuestionTwo.png'),
     type:"mc",
     triggerIndex: 98,
     onCorrect:answerCorrect,
@@ -46,7 +47,8 @@ const questions = [
     ]
   },
   {
-    text: "If she’s going at .4 m/s, and the zombies are 60 m behind her traveling at .5 m/s, will she make it to the bank 120 m in front of her?",
+    text: "(Read chapter 3 of Zombies Calculus.) Normal distributions are special functions that are used to model many real-world phenomena. Normal distributions are of central importance in statistics. The formula for the normal distribution with mean mu and standard deviation sigma is above.",
+    image: require('../../assets/QuestionThree.png'),
     type:"mc",
     triggerIndex: 100,
     onCorrect:answerCorrect,
@@ -57,7 +59,8 @@ const questions = [
     ]
   },
   {
-    text: "If we model his acceleration as 2(54x^3 - 63x^2 - 54x + 7)/(3x^2 + 1)^3 , his velocity is 2 m/s, and the zombies are currently 15m behind him going .5 m/s, will he make it to the building 200m ahead of him?",
+    text: "If a quantity $X$ is normally distributed, then the probability that $X$ is between two given numbers, say, $a$ and $b$, equals the area under the graph of the normal distribution between $a$ and $b$. That is, the probability that a< X <b equals above?",
+    image: require('../../assets/QuestionThreePart2.png'),
     type:"mc",
     triggerIndex: 102,
     onCorrect:answerCorrect,
@@ -66,40 +69,9 @@ const questions = [
       { text:"Yes", correct:true },
       { text:"No" },
     ]
-  },
-  {
-    text: "A concussion happens at 95G's or 932 Newtons. If we take the distance equation to be d(t) = 1/2x^3 - 3x^2 + 4x +.15 m, and it takes two seconds to swing, what is the mass, in kilograms, of the hammer we need to give the zombie a concussion and scare it away?",
-    type:"num",
-    answer: 141.2,
-    triggerIndex: 86,
-    onCorrect:answerCorrect,
-    onWrong:()=>alert("Nope. Try again!"),
-  },
-  {
-    text: "Assume that zombies travel at .25m/s on average, and the outbreak started 4 hours before the zombies showed up on campus, how far, in kilometers, must the source be?",
-    type:"num",
-    answer: 3.6,
-    triggerIndex: 121,
-    onCorrect:answerCorrect,
-    onWrong:()=>alert("Nope. Try again!"),
-  },
-  {
-    text: "Trucks like this usually travel 10 mpg, or 16,900 m/gallon. If there is 1/50  of a gallon left in the truck, how close, in meters, does it have to be to the wall to hit the wall with 1/100 of the gas tank left for a getaway?",
-    type:"num",
-    answer: 169,
-    triggerIndex: 159,
-    onCorrect:answerCorrect,
-    onWrong:()=>alert("Nope. Try again!"),
-  },
-  {
-    text: "If we model the of the speed of the zombies as 0.25t^4 -4.5t^3+2t^2+7t, where t is time, based on the population geography between Boston and campus, and it taking four hours for the zombies to reach campus, how far, in kilometers, is the actual source??",
-    answer: 213,
-    type:'num',
-    triggerIndex:143,
-    onCorrect:answerCorrect,
-    onWrong:()=>alert("Nope. Try again!"),
   }
-]
+
+
 
 export default class ModalExample extends Component {
 
